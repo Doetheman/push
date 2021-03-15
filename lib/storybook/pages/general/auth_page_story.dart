@@ -1,6 +1,6 @@
 /// -----------------------------------------------------------------
 ///
-/// File: auth_page.dart
+/// File: auth_page_story.dart
 /// Project: PUSH
 /// File Created: Monday, March 15th, 2021
 /// Description:
@@ -15,18 +15,14 @@
 ///
 /// -----------------------------------------------------------------
 
-import 'package:flutter/material.dart';
-import 'package:push_app/generated/i18n.dart';
+import 'package:push_app/app/pages/general/auth_page/auth_page.dart';
+import 'package:storybook_flutter/storybook_flutter.dart';
 
-// TODO
-class StylistHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: Text(I18n.of(context).commonStylist),
-        ),
-        body: Center(
-          child: Text('Coming soon'),
-        ),
-      );
+class AuthPageStory extends Story {
+  AuthPageStory()
+      : super(
+          name: 'Auth',
+          section: 'Pages',
+          builder: (_, KnobsBuilder kB) => AuthPage(),
+        );
 }

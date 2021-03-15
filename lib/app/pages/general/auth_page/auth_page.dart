@@ -26,13 +26,11 @@ class AuthPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Auth'),
         ),
-        body: Column(
-          children: <Widget>[
-            GestureDetector(
-              child: Text('CLICK ME'),
-              onTap: () => Get.toNamed(Routes.STYLIST_HOME),
-            ),
-          ],
+        body: Center(
+          child: GestureDetector(
+            child: Text('CLICK ME'),
+            onTap: () => Get.toNamed(Routes.STYLIST_HOME),
+          ),
         ),
       );
 }

@@ -1,6 +1,6 @@
 /// -----------------------------------------------------------------
 ///
-/// File: auth_page.dart
+/// File: stylist_page_stories.dart
 /// Project: PUSH
 /// File Created: Monday, March 15th, 2021
 /// Description:
@@ -16,17 +16,8 @@
 /// -----------------------------------------------------------------
 
 import 'package:flutter/material.dart';
-import 'package:push_app/generated/i18n.dart';
+import 'package:push_app/storybook/pages/stylist/stylist_home_page_story.dart';
 
-// TODO
-class StylistHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: Text(I18n.of(context).commonStylist),
-        ),
-        body: Center(
-          child: Text('Coming soon'),
-        ),
-      );
-}
+List<Widget> buildStylistPageStories() => <Widget>[
+      StylistHomePageStory(),
+    ];
