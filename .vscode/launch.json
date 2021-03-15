@@ -5,9 +5,29 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "push-app",
+      "name": "Run All Tests",
+      "type": "dart",
+      "request": "launch",
+      "program": "./test/"
+    },
+    {
+      "name": "Run App",
+      "program": "lib/app/main.dart",
       "request": "launch",
       "type": "dart"
+    },
+    {
+      "name": "Run Storybook",
+      "program": "lib/storybook/main_story.dart",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "Update Goldens",
+      "request": "launch",
+      "type": "dart",
+      "program": "./test/",
+      "args": ["--update-goldens"]
     }
   ]
 }
