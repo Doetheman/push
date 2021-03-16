@@ -1,0 +1,56 @@
+{
+  "dart.previewBuildRunnerTasks": true,
+  "python.pythonPath": "/usr/local/bin/python3",
+  // PSI HEADER EXT - Global Config
+  "psi-header.config": {
+    "forceToTop": true,
+    "blankLinesAfter": 1
+  },
+  // PSI HEADER EXT - System Variables
+  "psi-header.variables": [
+    ["projectname", "PUSH"],
+    ["projectCreationYear", "2021"],
+    ["company", "Long Software LLC"],
+    ["client", "PUSH"]
+  ],
+  // PSI HEADER EXT - Templates
+  "psi-header.templates": [
+    {
+      "language": "*",
+      "template": [
+        "",
+        "File: <<filename>>",
+        "Project: <<projectname>>",
+        "File Created: <<filecreated('dddd, MMMM Do, YYYY')>>",
+        "Description: ",
+        "",
+        "Author: <<author>> - <<authoremail>>",
+        "-----",
+        "Last Modified: <<dateformat('dddd, MMMM Do, YYYY')>>",
+        "Modified By: <<author>> - <<authoremail>>",
+        "-----",
+        "",
+        "Copyright (C) <<projectCreationYear>> - <<year>> <<company>> & <<client>>",
+        ""
+      ]
+    }
+  ],
+  // PSI HEADER EXT - Changes Tracking Configuration
+  "psi-header.changes-tracking": {
+    "autoHeader": "autoSave",
+    "isActive": true,
+    "enforceHeader": true,
+    "include": ["dart"],
+    "modDateFormat": "dddd, MMMM Do, YYYY"
+  },
+  // PSI HEADER EXT - Language Configuration
+  "psi-header.lang-config": [
+    {
+      "language": "dart",
+      "begin": "/// -----------------------------------------------------------------",
+      "end": "/// -----------------------------------------------------------------",
+      "prefix": "/// "
+    }
+  ],
+  "svg.preview.background": "transparent"
+}
