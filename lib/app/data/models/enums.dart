@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Monday, March 15th, 2021
+/// Last Modified: Thursday, March 18th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -63,4 +63,9 @@ class FirestoreCollection<String> extends Enum<String> {
       const FirestoreCollection('referrals');
   static const FirestoreCollection REVIEWS =
       const FirestoreCollection('reviews');
+}
+
+enum UserFileType {
+  image,
+  pdf,
 }
