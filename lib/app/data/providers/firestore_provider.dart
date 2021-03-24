@@ -1,18 +1,18 @@
 /// -----------------------------------------------------------------
-/// 
+///
 /// File: firestore_provider.dart
 /// Project: PUSH
 /// File Created: Monday, March 15th, 2021
-/// Description: 
-/// 
+/// Description:
+///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Monday, March 15th, 2021
+/// Last Modified: Wednesday, March 24th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
-/// 
+///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH
-/// 
+///
 /// -----------------------------------------------------------------
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -72,6 +72,10 @@ class FirestoreProvider {
       case FirestoreQueryOperator.ARRAY_CONTAINS:
         query = (usingCollection ? collection : startingQuery)
             .where(key, arrayContains: value);
+        break;
+      case FirestoreQueryOperator.ARRAY_CONTAINS_ANY:
+        query = (usingCollection ? collection : startingQuery)
+            .where(key, arrayContainsAny: value);
         break;
       case FirestoreQueryOperator.IS_NULL:
         query = (usingCollection ? collection : startingQuery)

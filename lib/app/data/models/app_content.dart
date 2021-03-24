@@ -27,6 +27,7 @@ class AppContent {
   String createdBy;
   DateTime lastUpdatedAt;
   DocumentReference documentReference;
+  DocumentSnapshot documentSnapshot;
 
   AppContent({
     this.createdAt,

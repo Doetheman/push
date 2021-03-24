@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Monday, March 15th, 2021
+/// Last Modified: Wednesday, March 24th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -28,8 +28,8 @@ class AuthPage extends StatelessWidget {
         ),
         body: Center(
           child: GestureDetector(
-            child: Text('CLICK ME'),
             onTap: () => Get.toNamed(Routes.STYLIST_HOME),
+            child: Text('CLICK ME'),
           ),
         ),
       );

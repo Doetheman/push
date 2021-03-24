@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Thursday, March 18th, 2021
+/// Last Modified: Wednesday, March 24th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -39,6 +39,8 @@ class FirestoreQueryOperator<String> extends Enum<String> {
       const FirestoreQueryOperator('>=');
   static const FirestoreQueryOperator ARRAY_CONTAINS =
       const FirestoreQueryOperator('array-contains');
+  static const FirestoreQueryOperator ARRAY_CONTAINS_ANY =
+      const FirestoreQueryOperator('array-contains-any');
   static const FirestoreQueryOperator IS_NULL =
       const FirestoreQueryOperator('isNull');
   static const FirestoreQueryOperator WHERE_IN =
@@ -52,20 +54,19 @@ class FirestoreCollection<String> extends Enum<String> {
       const FirestoreCollection('notifications');
   static const FirestoreCollection CONVERSATIONS =
       const FirestoreCollection('conversations');
-  static const FirestoreCollection RESTAURANTS =
-      const FirestoreCollection('restaurants');
-  static const FirestoreCollection MENU_ITEMS =
-      const FirestoreCollection('menu_items');
+  static const FirestoreCollection SHOPS = const FirestoreCollection('shops');
+  static const FirestoreCollection BOOTHS = const FirestoreCollection('booths');
   static const FirestoreCollection MESSAGES =
       const FirestoreCollection('messages');
-  static const FirestoreCollection LIKES = const FirestoreCollection('likes');
-  static const FirestoreCollection REFERRALS =
-      const FirestoreCollection('referrals');
-  static const FirestoreCollection REVIEWS =
-      const FirestoreCollection('reviews');
 }
 
 enum UserFileType {
   image,
   pdf,
+}
+
+enum NotificationRecipientsOption {
+  all,
+  stylists,
+  owners,
 }
