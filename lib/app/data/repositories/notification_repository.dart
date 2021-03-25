@@ -8,7 +8,7 @@
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
 /// Last Modified: Wednesday, March 24th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH
