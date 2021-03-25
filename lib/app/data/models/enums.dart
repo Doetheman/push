@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, March 24th, 2021
+/// Last Modified: Thursday, March 25th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -69,4 +69,10 @@ enum NotificationRecipientsOption {
   all,
   stylists,
   owners,
+}
+
+enum UserType {
+  admin,
+  stylist,
+  owner,
 }
