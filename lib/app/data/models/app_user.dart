@@ -1,13 +1,13 @@
 /// -----------------------------------------------------------------
 ///
-/// File: user.dart
+/// File: app_user.dart
 /// Project: PUSH
 /// File Created: Wednesday, March 17th, 2021
 /// Description:
 ///
 /// Author: Luchi - oluchi@longsoftware.io
 /// -----
-/// Last Modified: Thursday, March 25th, 2021
+/// Last Modified: Saturday, March 27th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -22,8 +22,8 @@ import 'package:push_app/app/data/models/user_file.dart';
 import 'package:push_app/app/utils/is.dart';
 import 'app_content.dart';
 
-class User extends AppContent {
-  User({
+class AppUser extends AppContent {
+  AppUser({
     DateTime createdAt,
     DateTime lastUpdatedAt,
     String id,
@@ -43,6 +43,17 @@ class User extends AppContent {
           createdBy: createdBy,
         );
 
+  AppUser.init({
+    this.email,
+    String uid,
+  }) {
+    DateTime now = DateTime.now();
+    createdAt = now;
+    lastUpdatedAt = now;
+    type = UserType.stylist;
+    id = uid;
+  }
+
   String firstName;
   String lastName;
   String email;
@@ -51,7 +62,7 @@ class User extends AppContent {
   List<UserFile> images;
   UserFile profileImage;
 
-  User copyWith({
+  AppUser copyWith({
     String firstName,
     String lastName,
     String email,
@@ -60,7 +71,7 @@ class User extends AppContent {
     List<UserFile> images,
     UserFile profileImage,
   }) =>
-      User(
+      AppUser(
         firstName: firstName ?? this.firstName,
         lastName: lastName ?? this.lastName,
         email: email ?? this.email,
@@ -70,7 +81,7 @@ class User extends AppContent {
         images: images ?? this.images,
       );
 
-  User.fromJson(Map<String, dynamic> json)
+  AppUser.fromJson(Map<String, dynamic> json, {DocumentReference reference})
       : firstName = json['firstName'],
         lastName = json['lastName'],
         email = json['email'],
@@ -87,7 +98,7 @@ class User extends AppContent {
                       UserFile.fromJson(imageJson),
                 ),
               ),
-        super.fromJson(json);
+        super.fromJson(json, reference: reference);
 
   @override
   Map<String, dynamic> toJson() => super.toJson()
