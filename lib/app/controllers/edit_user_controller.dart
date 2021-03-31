@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Saturday, March 27th, 2021
+/// Last Modified: Tuesday, March 30th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -44,6 +44,7 @@ class EditUserController extends GetxController {
   @override
   void onInit() {
     _imagesToDelete = <UserFile>[];
+    _isRequestInFlight = false.obs;
 
     super.onInit();
   }
