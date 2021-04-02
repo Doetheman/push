@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, March 31st, 2021
+/// Last Modified: Thursday, April 1st, 2021
 /// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
@@ -22,6 +22,7 @@ import 'package:push_app/storybook/pages/general/general_page_stories.dart';
 import 'package:push_app/storybook/pages/stylist/stylist_page_stories.dart';
 import 'package:push_app/storybook/theme/theme_stories.dart';
 import 'package:push_app/storybook/widgets/fields/field_stories.dart';
+import 'package:push_app/storybook/widgets/misc/misc_stories.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 
 void main() {
@@ -41,6 +42,7 @@ class StorybookApp extends StatelessWidget {
           ...buildGeneralPageStories(),
           ...buildStylistPageStories(),
           ...buildFieldStories(),
+          ...buildMiscStories(),
         ],
       );
 }

@@ -7,14 +7,15 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, March 31st, 2021
-/// Modified By: Courtney Johnson - courtney@longsoftware.io
+/// Last Modified: Friday, April 2nd, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH
 ///
 /// -----------------------------------------------------------------
 
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:push_app/app/theme/app_theme.dart';
@@ -95,13 +96,19 @@ class _TextInputFieldState extends State<TextInputField> {
               ? TextCapitalization.none
               : TextCapitalization.sentences,
           decoration: InputDecoration(
+            contentPadding: EdgeInsets.only(
+              left: 15,
+              right: 20,
+            ),
             hintText: widget.hintText,
-            suffixIcon: widget.isPassword
-                ? GestureDetector(
-                    onTap: _toggleTextVisibility,
-                    child: Icon(_passwordIcon),
-                  )
-                : widget.suffixIcon,
+            suffixIconConstraints: BoxConstraints(maxHeight: 22),
+            suffixIcon: (widget.isPassword
+                    ? GestureDetector(
+                        onTap: _toggleTextVisibility,
+                        child: Icon(_passwordIcon),
+                      )
+                    : widget.suffixIcon)
+                .paddingOnly(right: 20),
             labelText: widget.labelText ?? 'Field Label',
             labelStyle: AppTheme.bodyOne.copyWith(color: AppTheme.darkGrey),
             focusedBorder: OutlineInputBorder(

@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, March 30th, 2021
+/// Last Modified: Friday, April 2nd, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -99,6 +99,17 @@ class AppTheme {
 
   ThemeData get themeData => ThemeData(
         primaryColor: offBlack,
+        backgroundColor: offWhite,
+        scaffoldBackgroundColor: offWhite,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            primary: offBlack,
+            onSurface: lightGrey,
+            shadowColor: Colors.transparent,
+            onPrimary: Colors.white,
+            textStyle: bodyOne.copyWith(fontWeight: FontWeight.w600),
+          ),
+        ),
         textTheme: TextTheme(
           headline1: headlineOne,
           headline2: headlineTwo,
