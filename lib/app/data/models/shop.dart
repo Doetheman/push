@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Thursday, March 18th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Friday, April 2nd, 2021
+/// Modified By: Dorian - you@you.you
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH
@@ -30,7 +30,7 @@ class Shop extends AppContent {
     this.website,
     this.number,
     this.verified,
-    this.housrOfOperation,
+    this.hoursOfOperation,
     this.images,
   }) : super(
           createdAt: createdAt,
@@ -44,7 +44,7 @@ class Shop extends AppContent {
   String website;
   String number;
   bool verified;
-  List<HoursOfOperation> housrOfOperation;
+  List<HoursOfOperation> hoursOfOperation;
   List<UserFile> images;
 
   Shop copyWith({
@@ -53,7 +53,7 @@ class Shop extends AppContent {
     String website,
     String number,
     bool verified,
-    List<HoursOfOperation> housrOfOperation,
+    List<HoursOfOperation> hoursOfOperation,
     List<UserFile> images,
   }) =>
       Shop(
@@ -62,7 +62,7 @@ class Shop extends AppContent {
         website: website ?? this.website,
         number: number ?? this.number,
         verified: verified ?? this.verified,
-        housrOfOperation: housrOfOperation ?? this.housrOfOperation,
+        hoursOfOperation: hoursOfOperation ?? this.hoursOfOperation,
         images: images ?? this.images,
         createdAt: createdAt,
         lastUpdatedAt: lastUpdatedAt,
@@ -76,10 +76,10 @@ class Shop extends AppContent {
         website = json['website'],
         number = json['number'],
         verified = json['verified'] ?? false,
-        housrOfOperation = json['housrOfOperation'] == null
+        hoursOfOperation = json['hoursOfOperation'] == null
             ? null
             : List<HoursOfOperation>.from(
-                json['housrOfOperation'].map(
+                json['hoursOfOperation'].map(
                   (Map<String, dynamic> hoursJson) =>
                       HoursOfOperation.fromJson(hoursJson),
                 ),
@@ -102,10 +102,10 @@ class Shop extends AppContent {
       'website': website,
       'number': number,
       'verified': verified,
-      'housrOfOperation': housrOfOperation == null
+      'hoursOfOperation': hoursOfOperation == null
           ? null
           : List<Map<String, dynamic>>.from(
-              housrOfOperation.map(
+              hoursOfOperation.map(
                 (HoursOfOperation hours) => hours.toJson(),
               ),
             ),
