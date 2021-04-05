@@ -7,8 +7,8 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Thursday, March 25th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Monday, April 5th, 2021
+/// Modified By: Oluch Chukwunyere - Oluchi@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH
@@ -58,6 +58,8 @@ class FirestoreCollection<String> extends Enum<String> {
   static const FirestoreCollection BOOTHS = const FirestoreCollection('booths');
   static const FirestoreCollection MESSAGES =
       const FirestoreCollection('messages');
+  static const FirestoreCollection RESERVATIONS =
+      const FirestoreCollection('reservations');
 }
 
 enum UserFileType {
