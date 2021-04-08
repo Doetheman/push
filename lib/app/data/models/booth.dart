@@ -7,16 +7,19 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Thursday, March 18th, 2021
+/// Last Modified: Wednesday, April 7th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
-/// Copyright (C) 2021 - 2021 Long Software LLC & PUSH
+/// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
 ///
 /// -----------------------------------------------------------------
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:enum_to_string/enum_to_string.dart';
+import 'package:push_app/app/data/models/enums.dart';
 import 'package:push_app/app/data/models/user_file.dart';
+import 'package:push_app/app/utils/is.dart';
 import 'app_content.dart';
 
 class Booth extends AppContent {
@@ -26,10 +29,11 @@ class Booth extends AppContent {
     String id,
     String createdBy,
     this.outletsAvailable,
-    this.hvac,
+    this.hasHVAC,
     this.price,
     this.shopId,
     this.images,
+    this.specialties,
   }) : super(
           createdAt: createdAt,
           lastUpdatedAt: lastUpdatedAt,
@@ -37,24 +41,26 @@ class Booth extends AppContent {
           createdBy: createdBy,
         );
 
-  int outletsAvailable;
-  bool hvac;
+  bool outletsAvailable;
+  bool hasHVAC;
   int price; // in cents
   List<UserFile> images;
   String shopId;
+  List<Specialties> specialties;
 
-  Booth copyWith({
-    int outletsAvailable,
-    bool hvac,
-    String price,
-    List<UserFile> images,
-    String shopId,
-  }) =>
+  Booth copyWith(
+          {int outletsAvailable,
+          bool hasHVAC,
+          String price,
+          List<UserFile> images,
+          String shopId,
+          List<Specialties> specialties}) =>
       Booth(
         outletsAvailable: outletsAvailable ?? this.outletsAvailable,
-        hvac: hvac ?? this.hvac,
+        hasHVAC: hasHVAC ?? this.hasHVAC,
         price: price ?? this.price,
         shopId: shopId ?? this.shopId,
+        specialties: specialties ?? this.specialties,
         createdAt: createdAt,
         lastUpdatedAt: lastUpdatedAt,
         id: id,
@@ -63,9 +69,15 @@ class Booth extends AppContent {
 
   Booth.fromJson(Map<String, dynamic> json, {DocumentReference reference})
       : outletsAvailable = json['outletsAvailable'] ?? false,
-        hvac = json['hvac'],
+        hasHVAC = json['hasHVAC'] ?? false,
         price = json['price'] ?? 0,
         shopId = json['shopId'],
+        specialties = Is.truthy(json['specialties'])
+            ? json['specialties'].map(
+                (dynamic specialty) =>
+                    EnumToString.fromString(Specialties.values, specialty),
+              )
+            : <Specialties>[],
         images = json['images'] == null
             ? null
             : List<UserFile>.from(
@@ -79,9 +91,12 @@ class Booth extends AppContent {
   @override
   Map<String, dynamic> toJson() => <String, dynamic>{
         'outletsAvailable': outletsAvailable,
-        'hvac': hvac,
+        'hvac': hasHVAC,
         'price': price,
         'shopId': shopId,
+        'specialties': specialties?.map(
+          (Specialties specialty) => EnumToString.convertToString(specialty),
+        ),
         'images': images == null
             ? null
             : List<Map<String, dynamic>>.from(

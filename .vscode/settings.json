@@ -11,7 +11,7 @@
     ["projectname", "PUSH"],
     ["projectCreationYear", "2021"],
     ["company", "Long Software LLC"],
-    ["client", "PUSH"]
+    ["client", "PUSH LLC"]
   ],
   // PSI HEADER EXT - Templates
   "psi-header.templates": [

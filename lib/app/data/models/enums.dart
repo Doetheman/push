@@ -7,11 +7,11 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Monday, April 5th, 2021
-/// Modified By: Oluch Chukwunyere - Oluchi@longsoftware.io
+/// Last Modified: Wednesday, April 7th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
-/// Copyright (C) 2021 - 2021 Long Software LLC & PUSH
+/// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
 ///
 /// -----------------------------------------------------------------
 
@@ -77,4 +77,17 @@ enum UserType {
   admin,
   stylist,
   owner,
+}
+
+enum Specialties {
+  barbering,
+  hairStyling,
+  nailTechnichian,
+  braiding,
+  makeup,
+  waxing,
+  tattooing,
+  piercing,
+  hairColoring,
+  esthetics,
 }
