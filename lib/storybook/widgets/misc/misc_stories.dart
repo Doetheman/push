@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
+/// Last Modified: Friday, April 9th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -16,7 +16,9 @@
 /// -----------------------------------------------------------------
 import 'package:flutter/material.dart';
 import 'package:push_app/storybook/widgets/misc/action_button_story.dart';
+import 'package:push_app/storybook/widgets/misc/top_app_bar_story.dart';
 
 List<Widget> buildMiscStories() => <Widget>[
       ActionButtonStory(),
+      TopAppBarStory(),
     ];

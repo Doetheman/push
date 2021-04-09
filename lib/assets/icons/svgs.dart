@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
+/// Last Modified: Friday, April 9th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -17,3 +17,4 @@
 
 const String SVG_PATH = 'lib/assets/icons/';
 const String LOCATION_ICON = SVG_PATH + 'location.svg';
+const String BACK_ARROW_ICON = SVG_PATH + 'back_arrow.svg';
