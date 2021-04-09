@@ -18,3 +18,6 @@
 const String SVG_PATH = 'lib/assets/icons/';
 const String LOCATION_ICON = SVG_PATH + 'location.svg';
 const String BACK_ARROW_ICON = SVG_PATH + 'back_arrow.svg';
+const String HOME_ICON = SVG_PATH + 'home.svg';
+const String ACCOUNT_ICON = SVG_PATH + 'account.svg';
+const String SEARCH_ICON = SVG_PATH + 'search.svg';

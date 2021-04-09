@@ -34,6 +34,7 @@ class TopAppBar {
         actions: trailing != null ? <Widget>[trailing] : null,
         title: title,
         automaticallyImplyLeading: showBackButton,
+        elevation: 0,
         centerTitle: true,
         leading: showBackButton
             ? IconButton(
