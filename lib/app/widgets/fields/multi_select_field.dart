@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
+/// Last Modified: Friday, April 9th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -18,13 +18,13 @@
 import 'package:flutter/material.dart';
 import 'package:push_app/app/theme/app_theme.dart';
 
-class MultiSelectFilter<T> extends StatelessWidget {
+class MultiSelectField<T> extends StatelessWidget {
   final String label;
   final List<T> options;
   final List<T> selectedOptions;
   final Function(List<T> selectedOptions) onSelectionsChanged;
 
-  MultiSelectFilter({
+  MultiSelectField({
     Key key,
     this.label = '',
     this.options,

@@ -21,3 +21,4 @@ const String BACK_ARROW_ICON = SVG_PATH + 'back_arrow.svg';
 const String HOME_ICON = SVG_PATH + 'home.svg';
 const String ACCOUNT_ICON = SVG_PATH + 'account.svg';
 const String SEARCH_ICON = SVG_PATH + 'search.svg';
+const String ARROW_DROP_DOWN = SVG_PATH + 'arrow_drop_down.svg';
