@@ -34,6 +34,12 @@ class I18n implements WidgetsLocalizations {
 
   /// "Stylist"
   String get commonStylist => "Stylist";
+  /// "Shop Owner"
+  String get commonShopOwner => "Shop Owner";
+  /// "Reserve a space to operate your business from any salon in the world."
+  String get userTypeCardStylistBody => "Reserve a space to operate your business from any salon in the world.";
+  /// "Manage each booth or space within your shop individually."
+  String get userTypeCardShopOwnerBody => "Manage each booth or space within your shop individually.";
 }
 
 class _I18n_en_US extends I18n {

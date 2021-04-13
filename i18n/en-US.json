@@ -1,5 +1,12 @@
+
 {
   "common": {
-    "stylist": "Stylist"
+    "stylist": "Stylist",
+    "shopOwner": "Shop Owner"
+  },
+
+  "userTypeCard": {
+    "stylistBody": "Reserve a space to operate your business from any salon in the world.",
+    "shopOwnerBody": "Manage each booth or space within your shop individually."
   }
 }
