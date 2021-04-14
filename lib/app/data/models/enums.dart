@@ -7,8 +7,8 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Tuesday, April 13th, 2021
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -90,4 +90,10 @@ enum Specialties {
   piercing,
   hairColoring,
   esthetics,
+}
+
+enum FeeType {
+  fixed,
+  commission,
+  fixedAndCommission,
 }

@@ -40,6 +40,24 @@ class I18n implements WidgetsLocalizations {
   String get userTypeCardStylistBody => "Reserve a space to operate your business from any salon in the world.";
   /// "Manage each booth or space within your shop individually."
   String get userTypeCardShopOwnerBody => "Manage each booth or space within your shop individually.";
+  /// "Fixed"
+  String get feeTypesFixed => "Fixed";
+  /// "Commission"
+  String get feeTypesCommission => "Commission";
+  /// "Fixed + Commission"
+  String get feeTypesFixedAndCommission => "Fixed + Commission";
+  /// "Pay a set rate for a set period of time"
+  String get feeTypesDescriptionFixedBody => "Pay a set rate for a set period of time";
+  /// "Ex: \$35 per day"
+  String get feeTypesDescriptionFixedExample => "Ex: \$35 per day";
+  /// "Pay a set percentage of your revenue to the shop"
+  String get feeTypesDescriptionCommissionBody => "Pay a set percentage of your revenue to the shop";
+  /// "Ex: 20% per transaction"
+  String get feeTypesDescriptionCommissionExample => "Ex: 20% per transaction";
+  /// "Pay a set minimum rate that increases with sales"
+  String get feeTypesDescriptionFixedAndCommissionBody => "Pay a set minimum rate that increases with sales";
+  /// "Ex: \$15 per day + 5% per transaction"
+  String get feeTypesDescriptionFixedAndCommissionExample => "Ex: \$15 per day + 5% per transaction";
 }
 
 class _I18n_en_US extends I18n {
