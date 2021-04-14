@@ -29,5 +29,10 @@
         "example": "Ex: \\$15 per day + 5% per transaction"
       }
     }
+  },
+
+  "bookReservationCard": {
+    "title": "Book your first reservation",
+    "body": "Find an available booth for your specialization anywhere in the country."
   }
 }

@@ -7,8 +7,8 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Monday, April 12th, 2021
-/// Modified By: Courtney Johnson - courtney@longsoftware.io
+/// Last Modified: Wednesday, April 14th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -24,3 +24,4 @@ const String SEARCH_ICON = SVG_PATH + 'search.svg';
 const String ARROW_DROP_DOWN = SVG_PATH + 'arrow_drop_down.svg';
 const String PLAIN_ACCOUNT = SVG_PATH + 'plain_account.svg';
 const String RIGHT_ARROW = SVG_PATH + 'right_arrow.svg';
+const String ADD_ICON = SVG_PATH + 'add.svg';

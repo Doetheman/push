@@ -58,6 +58,10 @@ class I18n implements WidgetsLocalizations {
   String get feeTypesDescriptionFixedAndCommissionBody => "Pay a set minimum rate that increases with sales";
   /// "Ex: \$15 per day + 5% per transaction"
   String get feeTypesDescriptionFixedAndCommissionExample => "Ex: \$15 per day + 5% per transaction";
+  /// "Book your first reservation"
+  String get bookReservationCardTitle => "Book your first reservation";
+  /// "Find an available booth for your specialization anywhere in the country."
+  String get bookReservationCardBody => "Find an available booth for your specialization anywhere in the country.";
 }
 
 class _I18n_en_US extends I18n {
