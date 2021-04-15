@@ -36,6 +36,10 @@ class I18n implements WidgetsLocalizations {
   String get commonStylist => "Stylist";
   /// "Shop Owner"
   String get commonShopOwner => "Shop Owner";
+  /// "Revenue"
+  String get commonRevenue => "Revenue";
+  /// "Costs"
+  String get commonCosts => "Costs";
   /// "Reserve a space to operate your business from any salon in the world."
   String get userTypeCardStylistBody => "Reserve a space to operate your business from any salon in the world.";
   /// "Manage each booth or space within your shop individually."
@@ -46,6 +50,10 @@ class I18n implements WidgetsLocalizations {
   String get feeTypesCommission => "Commission";
   /// "Fixed + Commission"
   String get feeTypesFixedAndCommission => "Fixed + Commission";
+  /// "There are three types of fees that a reservation may have."
+  String get feeTypesHeaderTitle => "There are three types of fees that a reservation may have.";
+  /// "Find a spot with the pricing model that works best for your business!"
+  String get feeTypesHeaderSubtitle => "Find a spot with the pricing model that works best for your business!";
   /// "Pay a set rate for a set period of time"
   String get feeTypesDescriptionFixedBody => "Pay a set rate for a set period of time";
   /// "Ex: \$35 per day"

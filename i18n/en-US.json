@@ -1,7 +1,9 @@
 {
   "common": {
     "stylist": "Stylist",
-    "shopOwner": "Shop Owner"
+    "shopOwner": "Shop Owner",
+    "revenue": "Revenue",
+    "costs": "Costs"
   },
 
   "userTypeCard": {
@@ -13,6 +15,10 @@
     "fixed": "Fixed",
     "commission": "Commission",
     "fixedAndCommission": "Fixed + Commission",
+    "header": {
+      "title": "There are three types of fees that a reservation may have.",
+      "subtitle": "Find a spot with the pricing model that works best for your business!"
+    },
     "description": {
       "fixed": {
         "body": "Pay a set rate for a set period of time",

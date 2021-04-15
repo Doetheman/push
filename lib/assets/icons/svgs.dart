@@ -8,7 +8,7 @@
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
 /// Last Modified: Thursday, April 15th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -29,3 +29,4 @@ const String FIXED_FEE_TYPE = SVG_PATH + 'fixed_fee_type.svg';
 const String FIXED_AND_COMMISSION_FEE_TYPE =
     SVG_PATH + 'fixed_and_commission_fee_type.svg';
 const String COMMISSION_FEE_TYPE = SVG_PATH + 'commission_fee_type.svg';
+const String SHOP_ICON = SVG_PATH + 'shop.svg';
