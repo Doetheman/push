@@ -7,25 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, April 13th, 2021
+/// Last Modified: Thursday, April 15th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
-/// -----
-///
-/// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
-///
-/// -----------------------------------------------------------------
-
-/// -----------------------------------------------------------------
-///
-/// File: user_type_card.dart
-/// Project: PUSH
-/// File Created: Monday, April 12th, 2021
-/// Description:
-///
-/// Author: Courtney Johnson - courtney@longsoftware.io
-/// -----
-/// Last Modified: Monday, April 12th, 2021
-/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC

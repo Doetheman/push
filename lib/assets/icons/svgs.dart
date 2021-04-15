@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 14th, 2021
+/// Last Modified: Thursday, April 15th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -25,3 +25,7 @@ const String ARROW_DROP_DOWN = SVG_PATH + 'arrow_drop_down.svg';
 const String PLAIN_ACCOUNT = SVG_PATH + 'plain_account.svg';
 const String RIGHT_ARROW = SVG_PATH + 'right_arrow.svg';
 const String ADD_ICON = SVG_PATH + 'add.svg';
+const String FIXED_FEE_TYPE = SVG_PATH + 'fixed_fee_type.svg';
+const String FIXED_AND_COMMISSION_FEE_TYPE =
+    SVG_PATH + 'fixed_and_commission_fee_type.svg';
+const String COMMISSION_FEE_TYPE = SVG_PATH + 'commission_fee_type.svg';
