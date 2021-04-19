@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Thursday, April 15th, 2021
+/// Modified By: Dorian Holmes - dorian@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -34,11 +34,11 @@ class BoothRepository {
 
   // TODO: Add filtering
   Future<AlgoliaQueryResult> getAllBooths({String query, int page}) =>
-      _algoliaProvider.search(
-        FirestoreCollection.BOOTHS.toString(),
-        query,
-        page: page,
-      );
+    _algoliaProvider.search(
+      FirestoreCollection.BOOTHS.toString(),
+      query,
+      page: page,
+    );
 
   Future<Booth> add(Booth booth) async {
     booth.documentReference = await firestoreProvider.createDocument(

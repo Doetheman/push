@@ -40,6 +40,10 @@ class I18n implements WidgetsLocalizations {
   String get commonRevenue => "Revenue";
   /// "Costs"
   String get commonCosts => "Costs";
+  /// "Messages"
+  String get commonMessages => "Messages";
+  /// "Notifications"
+  String get commonNotifications => "Notifications";
   /// "Reserve a space to operate your business from any salon in the world."
   String get userTypeCardStylistBody => "Reserve a space to operate your business from any salon in the world.";
   /// "Manage each booth or space within your shop individually."
@@ -70,6 +74,22 @@ class I18n implements WidgetsLocalizations {
   String get bookReservationCardTitle => "Book your first reservation";
   /// "Find an available booth for your specialization anywhere in the country."
   String get bookReservationCardBody => "Find an available booth for your specialization anywhere in the country.";
+  /// "You have ${number} reservations on ${date}."
+  String topBarYouHaveReservationsOn(String number, String date) => "You have ${number} reservations on ${date}.";
+  /// "You have 1 reservation on ${date}."
+  String topBarYouHaveOneReservationOn(String date) => "You have 1 reservation on ${date}.";
+  /// "You have ${number} reservations today."
+  String topBarYouHaveReservationsToday(String number) => "You have ${number} reservations today.";
+  /// "You have 1 reservation today."
+  String get topBarYouHaveOneReservationToday => "You have 1 reservation today.";
+  /// "You have ${number} unread messages."
+  String topBarYouHaveUnreadMessages(String number) => "You have ${number} unread messages.";
+  /// "You have 1 unread message."
+  String get topBarYouHaveOneUnreadMessage => "You have 1 unread message.";
+  /// "You have ${number} unread notifications"
+  String topBarYouHaveUnreadNotifications(String number) => "You have ${number} unread notifications";
+  /// "You have 1 unread notification."
+  String get topBarYouHaveOneUnreadNotification => "You have 1 unread notification.";
 }
 
 class _I18n_en_US extends I18n {

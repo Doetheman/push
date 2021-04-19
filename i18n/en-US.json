@@ -3,7 +3,9 @@
     "stylist": "Stylist",
     "shopOwner": "Shop Owner",
     "revenue": "Revenue",
-    "costs": "Costs"
+    "costs": "Costs",
+    "messages": "Messages",
+    "notifications": "Notifications"
   },
 
   "userTypeCard": {
@@ -40,5 +42,16 @@
   "bookReservationCard": {
     "title": "Book your first reservation",
     "body": "Find an available booth for your specialization anywhere in the country."
+  },
+
+  "topBar": {
+    "youHaveReservationsOn": "You have ${number} reservations on ${date}.",
+    "youHaveOneReservationOn": "You have 1 reservation on ${date}.",
+    "youHaveReservationsToday": "You have ${number} reservations today.",
+    "youHaveOneReservationToday": "You have 1 reservation today.",
+    "youHaveUnreadMessages": "You have ${number} unread messages.",
+    "youHaveOneUnreadMessage": "You have 1 unread message.",
+    "youHaveUnreadNotifications": "You have ${number} unread notifications",
+    "youHaveOneUnreadNotification": "You have 1 unread notification."
   }
 }

@@ -7,8 +7,8 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Thursday, April 15th, 2021
-/// Modified By: Courtney Johnson - courtney@longsoftware.io
+/// Last Modified: Sunday, April 18th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -30,3 +30,16 @@ const String FIXED_AND_COMMISSION_FEE_TYPE =
     SVG_PATH + 'fixed_and_commission_fee_type.svg';
 const String COMMISSION_FEE_TYPE = SVG_PATH + 'commission_fee_type.svg';
 const String SHOP_ICON = SVG_PATH + 'shop.svg';
+const String PLAIN_CALENDAR = SVG_PATH + 'calendar.svg';
+const String PLAIN_CONVERSATION = SVG_PATH + 'conversation_inactive.svg';
+const String CALENDAR_ICON = SVG_PATH + 'calendar.svg';
+const String COMMUNICATION_ICON = SVG_PATH + 'communication.svg';
+const String COMMUNICATION_NOTIFCATION_ICON =
+    SVG_PATH + 'communication_notification.svg';
+const String LEFT_ARROW_ICON = SVG_PATH + 'left_arrow.svg';
+const String RIGHT_ARROW_ICON = SVG_PATH + 'right_arrow.svg';
+const String COMMUNICATION_NOTIFICATION_OFFBLACK =
+    SVG_PATH + 'communication_notification_off_black.svg';
+const String COMMUNICATION_OFFBLACK_ICON =
+    SVG_PATH + 'communication_off_black.svg';
+const String CALENDAR_OFF_BLACK_ICON = SVG_PATH + 'calendar_off_black.svg';
