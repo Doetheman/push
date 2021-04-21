@@ -7,7 +7,7 @@
 ///
 /// Author: Dorian Holmes - dorian@longsoftware.io
 /// -----
-/// Last Modified: Sunday, April 18th, 2021
+/// Last Modified: Wednesday, April 21st, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -21,6 +21,7 @@ import 'package:push_app/app/controllers/calendar_controller.dart';
 import 'package:push_app/app/controllers/communications_controller.dart';
 import 'package:push_app/app/controllers/home_controller.dart';
 import 'package:push_app/app/theme/app_theme.dart';
+import 'package:push_app/app/widgets/calendar/calendar_pager.dart';
 import 'package:push_app/assets/icons/svgs.dart';
 import 'package:push_app/generated/i18n.dart';
 import 'package:push_app/storybook/widgets/misc/svg_button.dart';
@@ -121,29 +122,18 @@ class DefaultHomeAppBar extends StatelessWidget {
 
 class CalendarAppBar extends StatelessWidget {
   final HomeController homeController = Get.find();
-  final CalendarController calendarController = Get.find();
 
   @override
-  Widget build(BuildContext context) => Obx(
-        () => Row(
-          children: <Widget>[
-            SvgButton(
-              svg: CALENDAR_OFF_BLACK_ICON,
-              onPressed: () => homeController.onToggleCalendarView(),
-            ).paddingOnly(right: 13),
-            Text(calendarController.selectedDate, style: AppTheme.subtitleOne),
-            Spacer(),
-            SvgButton(
-              svg: LEFT_ARROW_ICON,
-              onPressed: () {},
-            ).paddingOnly(right: 30),
-            SvgButton(
-              svg: RIGHT_ARROW_ICON,
-              onPressed: () {},
-            )
-          ],
-        ).paddingOnly(bottom: 4),
-      );
+  Widget build(BuildContext context) => Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          SvgButton(
+            svg: CALENDAR_OFF_BLACK_ICON,
+            onPressed: () => homeController.onToggleCalendarView(),
+          ).paddingOnly(right: 13),
+          Expanded(child: CalendarPager()),
+        ],
+      ).paddingOnly(bottom: 4);
 }
 
 class AppBarSubTitle extends StatelessWidget {
