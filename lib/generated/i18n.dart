@@ -44,6 +44,12 @@ class I18n implements WidgetsLocalizations {
   String get commonMessages => "Messages";
   /// "Notifications"
   String get commonNotifications => "Notifications";
+  /// "Yes"
+  String get commonYes => "Yes";
+  /// "No"
+  String get commonNo => "No";
+  /// "State"
+  String get commonState => "State";
   /// "Reserve a space to operate your business from any salon in the world."
   String get userTypeCardStylistBody => "Reserve a space to operate your business from any salon in the world.";
   /// "Manage each booth or space within your shop individually."
@@ -90,6 +96,12 @@ class I18n implements WidgetsLocalizations {
   String topBarYouHaveUnreadNotifications(String number) => "You have ${number} unread notifications";
   /// "You have 1 unread notification."
   String get topBarYouHaveOneUnreadNotification => "You have 1 unread notification.";
+  /// "Are you licensed by a state board for barbers and cosmetology."
+  String get stylistBasicInfoInputAreYouLicensed => "Are you licensed by a state board for barbers and cosmetology.";
+  /// "Full Name"
+  String get stylistBasicInfoInputFullName => "Full Name";
+  /// "Primary Location"
+  String get stylistBasicInfoInputPrimaryLocation => "Primary Location";
 }
 
 class _I18n_en_US extends I18n {

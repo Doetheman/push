@@ -5,7 +5,10 @@
     "revenue": "Revenue",
     "costs": "Costs",
     "messages": "Messages",
-    "notifications": "Notifications"
+    "notifications": "Notifications",
+    "yes": "Yes",
+    "no": "No",
+    "state": "State"
   },
 
   "userTypeCard": {
@@ -53,5 +56,11 @@
     "youHaveOneUnreadMessage": "You have 1 unread message.",
     "youHaveUnreadNotifications": "You have ${number} unread notifications",
     "youHaveOneUnreadNotification": "You have 1 unread notification."
+  },
+
+  "stylistBasicInfoInput": {
+    "areYouLicensed": "Are you licensed by a state board for barbers and cosmetology.",
+    "fullName": "Full Name",
+    "primaryLocation": "Primary Location"
   }
 }
