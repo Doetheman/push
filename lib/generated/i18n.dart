@@ -102,6 +102,10 @@ class I18n implements WidgetsLocalizations {
   String get stylistBasicInfoInputFullName => "Full Name";
   /// "Primary Location"
   String get stylistBasicInfoInputPrimaryLocation => "Primary Location";
+  /// "${minHours} - ${maxHours} hours within the next day"
+  String rencentSearchListItemOneDayRange(String minHours, String maxHours) => "${minHours} - ${maxHours} hours within the next day";
+  /// "${minHours} - ${maxHours} hours within the next ${days} days"
+  String rencentSearchListItemMultiDayRange(String minHours, String maxHours, String days) => "${minHours} - ${maxHours} hours within the next ${days} days";
 }
 
 class _I18n_en_US extends I18n {

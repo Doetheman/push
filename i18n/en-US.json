@@ -62,5 +62,10 @@
     "areYouLicensed": "Are you licensed by a state board for barbers and cosmetology.",
     "fullName": "Full Name",
     "primaryLocation": "Primary Location"
+  },
+
+  "rencentSearchListItem": {
+    "oneDayRange": "${minHours} - ${maxHours} hours within the next day",
+    "multiDayRange": "${minHours} - ${maxHours} hours within the next ${days} days"
   }
 }

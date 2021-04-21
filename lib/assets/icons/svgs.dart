@@ -7,8 +7,8 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, April 20th, 2021
-/// Modified By: Courtney Johnson - courtney@longsoftware.io
+/// Last Modified: Wednesday, April 21st, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -44,3 +44,4 @@ const String COMMUNICATION_OFFBLACK_ICON =
     SVG_PATH + 'communication_off_black.svg';
 const String CALENDAR_OFF_BLACK_ICON = SVG_PATH + 'calendar_off_black.svg';
 const String LOCATION_POINTER_ICON = SVG_PATH + 'location_pointer_icon.svg';
+const String CLOCK_ICON = SVG_PATH + 'clock.svg';
