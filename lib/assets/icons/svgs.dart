@@ -45,3 +45,4 @@ const String COMMUNICATION_OFFBLACK_ICON =
 const String CALENDAR_OFF_BLACK_ICON = SVG_PATH + 'calendar_off_black.svg';
 const String LOCATION_POINTER_ICON = SVG_PATH + 'location_pointer_icon.svg';
 const String CLOCK_ICON = SVG_PATH + 'clock.svg';
+const String CIRCLE_X = SVG_PATH + 'circle_x.svg';

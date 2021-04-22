@@ -18,8 +18,10 @@
 import 'package:flutter/material.dart';
 import 'package:push_app/storybook/widgets/booth_search/location_list_item_story.dart';
 import 'package:push_app/storybook/widgets/booth_search/recent_search_list_item_story.dart';
+import 'package:push_app/storybook/widgets/booth_search/search_bar_story.dart';
 
 List<Widget> buildBoothSearchStories() => <Widget>[
       RecentSearchListItemStory(),
       LocationListItemStory(),
+      SearchBarStory(),
     ];

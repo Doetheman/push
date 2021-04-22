@@ -63,10 +63,10 @@ class RecentSearchListItem extends StatelessWidget {
                 ),
                 Text(
                   boothSearch.minDaysFromNow == 1
-                      ? I18n.of(context).rencentSearchListItemOneDayRange(
+                      ? I18n.of(context).recentSearchListItemOneDayRange(
                           boothSearch.minimumHoursAvailable.toString(),
                           boothSearch.maxHoursAvailable.toString())
-                      : I18n.of(context).rencentSearchListItemMultiDayRange(
+                      : I18n.of(context).recentSearchListItemMultiDayRange(
                           boothSearch.minimumHoursAvailable.toString(),
                           boothSearch.maxHoursAvailable.toString(),
                           boothSearch.minDaysFromNow.toString()),

@@ -103,9 +103,11 @@ class I18n implements WidgetsLocalizations {
   /// "Primary Location"
   String get stylistBasicInfoInputPrimaryLocation => "Primary Location";
   /// "${minHours} - ${maxHours} hours within the next day"
-  String rencentSearchListItemOneDayRange(String minHours, String maxHours) => "${minHours} - ${maxHours} hours within the next day";
+  String recentSearchListItemOneDayRange(String minHours, String maxHours) => "${minHours} - ${maxHours} hours within the next day";
   /// "${minHours} - ${maxHours} hours within the next ${days} days"
-  String rencentSearchListItemMultiDayRange(String minHours, String maxHours, String days) => "${minHours} - ${maxHours} hours within the next ${days} days";
+  String recentSearchListItemMultiDayRange(String minHours, String maxHours, String days) => "${minHours} - ${maxHours} hours within the next ${days} days";
+  /// "Where do you want to style?"
+  String get searchBarHintText => "Where do you want to style?";
 }
 
 class _I18n_en_US extends I18n {
