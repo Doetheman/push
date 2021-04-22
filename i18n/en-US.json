@@ -68,7 +68,12 @@
     "oneDayRange": "${minHours} - ${maxHours} hours within the next day",
     "multiDayRange": "${minHours} - ${maxHours} hours within the next ${days} days"
   },
+
   "searchBar": {
     "hintText": "Where do you want to style?"
+  },
+
+  "specialtyMultiSelect": {
+    "selectAll": "Select all that apply"
   }
 }

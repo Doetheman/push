@@ -108,6 +108,8 @@ class I18n implements WidgetsLocalizations {
   String recentSearchListItemMultiDayRange(String minHours, String maxHours, String days) => "${minHours} - ${maxHours} hours within the next ${days} days";
   /// "Where do you want to style?"
   String get searchBarHintText => "Where do you want to style?";
+  /// "Select all that apply"
+  String get specialtyMultiSelectSelectAll => "Select all that apply";
 }
 
 class _I18n_en_US extends I18n {
