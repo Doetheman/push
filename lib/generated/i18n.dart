@@ -50,6 +50,8 @@ class I18n implements WidgetsLocalizations {
   String get commonNo => "No";
   /// "State"
   String get commonState => "State";
+  /// " and "
+  String get commonAnd => " and ";
   /// "Reserve a space to operate your business from any salon in the world."
   String get userTypeCardStylistBody => "Reserve a space to operate your business from any salon in the world.";
   /// "Manage each booth or space within your shop individually."
@@ -110,6 +112,24 @@ class I18n implements WidgetsLocalizations {
   String get searchBarHintText => "Where do you want to style?";
   /// "Select all that apply"
   String get specialtyMultiSelectSelectAll => "Select all that apply";
+  /// "Explore nearby"
+  String get exploreNearbyTitle => "Explore nearby";
+  /// "Showing booths based on your specialties that are available "
+  String get exploreNearbyBody => "Showing booths based on your specialties that are available ";
+  /// "${availabilityType} "
+  String exploreNearbyAvailability(String availabilityType) => "${availabilityType} ";
+  /// "any time next week "
+  String get exploreNearbyAnyTimeNextWeek => "any time next week ";
+  /// "for "
+  String get exploreNearbyFor => "for ";
+  /// "${minHours}-${maxHours} hours "
+  String exploreNearbyMinMaxHours(String minHours, String maxHours) => "${minHours}-${maxHours} hours ";
+  /// "with "
+  String get exploreNearbyWith => "with ";
+  /// " fee type"
+  String get exploreNearbyFeeType => " fee type";
+  /// "any"
+  String get exploreNearbyAny => "any";
 }
 
 class _I18n_en_US extends I18n {

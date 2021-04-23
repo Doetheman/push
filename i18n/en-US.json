@@ -8,7 +8,8 @@
     "notifications": "Notifications",
     "yes": "Yes",
     "no": "No",
-    "state": "State"
+    "state": "State",
+    "and": " and "
   },
 
   "userTypeCard": {
@@ -75,5 +76,16 @@
 
   "specialtyMultiSelect": {
     "selectAll": "Select all that apply"
+  },
+  "exploreNearby": {
+    "title": "Explore nearby",
+    "body": "Showing booths based on your specialties that are available ",
+    "availability": "${availabilityType} ",
+    "anyTimeNextWeek": "any time next week ",
+    "for": "for ",
+    "minMaxHours": "${minHours}-${maxHours} hours ",
+    "with": "with ",
+    "feeType": " fee type",
+    "any": "any"
   }
 }

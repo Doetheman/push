@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, April 13th, 2021
+/// Last Modified: Thursday, April 22nd, 2021
 /// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
@@ -96,4 +96,10 @@ enum FeeType {
   fixed,
   commission,
   fixedAndCommission,
+}
+
+enum ReservationAvailabilityType {
+  today,
+  tomorrow,
+  anytimeThisWeek,
 }
