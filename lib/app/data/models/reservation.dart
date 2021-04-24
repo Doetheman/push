@@ -7,8 +7,8 @@
 ///
 /// Author: Dorian Holmes - dorian@Longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Thursday, April 22nd, 2021
+/// Modified By: Dorian Holmes - dorian@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -16,7 +16,10 @@
 /// -----------------------------------------------------------------
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:push_app/app/data/models/shop.dart';
 import 'app_content.dart';
+import 'booth.dart';
+import 'enums.dart';
 
 class Reservation extends AppContent {
   Reservation({
@@ -27,6 +30,9 @@ class Reservation extends AppContent {
     this.startTime,
     this.endTime,
     this.reservationFee,
+    this.status,
+    this.booth,
+    this.shop,
     this.transactionId,
     this.boothId,
     this.shopId,
@@ -43,6 +49,9 @@ class Reservation extends AppContent {
   String transactionId;
   String boothId;
   String shopId;
+  ReservationStatus status;
+  Booth booth;
+  Shop shop;
 
   Reservation copyWith({
     DateTime startTime,

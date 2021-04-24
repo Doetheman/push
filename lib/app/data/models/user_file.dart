@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
+/// Last Modified: Saturday, April 24th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -17,6 +17,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:enum_to_string/enum_to_string.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:push_app/app/data/models/app_content.dart';
 import 'package:push_app/app/data/models/enums.dart';
 
@@ -24,7 +25,7 @@ class UserFile extends AppContent {
   String altText;
   String name;
   String storagePath;
-  dynamic data;
+  PickedFile data;
   bool hasBeenDeleted;
   String downloadUrl;
   UserFileType type;

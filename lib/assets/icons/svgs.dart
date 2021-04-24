@@ -7,8 +7,8 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Thursday, April 22nd, 2021
-/// Modified By: Courtney Johnson - courtney@longsoftware.io
+/// Last Modified: Saturday, April 24th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -47,3 +47,9 @@ const String LOCATION_POINTER_ICON = SVG_PATH + 'location_pointer_icon.svg';
 const String CLOCK_ICON = SVG_PATH + 'clock.svg';
 const String CIRCLE_X = SVG_PATH + 'circle_x.svg';
 const String FILTER_ICON = SVG_PATH + 'filter.svg';
+const String CANCELLED_STATUS_ICON = SVG_PATH + 'cancelled_status.svg';
+const String PENDING_STATUS_ICON = SVG_PATH + 'pending.svg';
+const String COMPLETE_STATUS_ICON = SVG_PATH + 'complete_status.svg';
+const String CONFIRMED_STATUS_ICON = SVG_PATH + 'confirmed_status.svg';
+const String SHOP_MESSAGE_ICON = SVG_PATH + 'shop_message.svg';
+const String SHOP_LOCATION_ICON = SVG_PATH + 'shop_location.svg';

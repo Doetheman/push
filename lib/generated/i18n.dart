@@ -52,6 +52,8 @@ class I18n implements WidgetsLocalizations {
   String get commonState => "State";
   /// " and "
   String get commonAnd => " and ";
+  /// "Booth: ${name}"
+  String commonBoothName(String name) => "Booth: ${name}";
   /// "Reserve a space to operate your business from any salon in the world."
   String get userTypeCardStylistBody => "Reserve a space to operate your business from any salon in the world.";
   /// "Manage each booth or space within your shop individually."
@@ -130,6 +132,14 @@ class I18n implements WidgetsLocalizations {
   String get exploreNearbyFeeType => " fee type";
   /// "any"
   String get exploreNearbyAny => "any";
+  /// "Confirmation Pending"
+  String get reservationStatusPending => "Confirmation Pending";
+  /// "Confirmed"
+  String get reservationStatusConfirmed => "Confirmed";
+  /// "Cancelled"
+  String get reservationStatusCancelled => "Cancelled";
+  /// "complete"
+  String get reservationStatusComplete => "complete";
 }
 
 class _I18n_en_US extends I18n {

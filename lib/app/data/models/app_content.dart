@@ -7,8 +7,8 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Friday, April 23rd, 2021
+/// Modified By: Dorian Holmes - dorian@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -20,7 +20,7 @@ import 'package:get/get.dart';
 import 'package:push_app/app/data/providers/auth_provider.dart';
 
 class AppContent {
-  AuthProvider authProvider = Get.find();
+  BaseAuthProvider authProvider = Get.find();
 
   DateTime createdAt;
   String id;

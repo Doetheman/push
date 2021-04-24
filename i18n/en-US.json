@@ -9,7 +9,8 @@
     "yes": "Yes",
     "no": "No",
     "state": "State",
-    "and": " and "
+    "and": " and ",
+    "boothName": "Booth: ${name}"
   },
 
   "userTypeCard": {
@@ -87,5 +88,11 @@
     "with": "with ",
     "feeType": " fee type",
     "any": "any"
+  },
+  "reservationStatus": {
+    "pending": "Confirmation Pending",
+    "confirmed": "Confirmed",
+    "cancelled": "Cancelled",
+    "complete": "complete"
   }
 }

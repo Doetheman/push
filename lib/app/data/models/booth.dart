@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Friday, April 23rd, 2021
+/// Modified By: Dorian Holmes - dorian@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -34,6 +34,7 @@ class Booth extends AppContent {
     this.shopId,
     this.images,
     this.specialties,
+    this.boothName,
   }) : super(
           createdAt: createdAt,
           lastUpdatedAt: lastUpdatedAt,
@@ -47,6 +48,8 @@ class Booth extends AppContent {
   List<UserFile> images;
   String shopId;
   List<Specialties> specialties;
+  double ratings;
+  String boothName;
 
   Booth copyWith(
           {int outletsAvailable,
