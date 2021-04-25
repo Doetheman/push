@@ -54,6 +54,8 @@ class I18n implements WidgetsLocalizations {
   String get commonAnd => " and ";
   /// "Booth: ${name}"
   String commonBoothName(String name) => "Booth: ${name}";
+  /// "Reserve"
+  String get commonReserve => "Reserve";
   /// "Reserve a space to operate your business from any salon in the world."
   String get userTypeCardStylistBody => "Reserve a space to operate your business from any salon in the world.";
   /// "Manage each booth or space within your shop individually."
@@ -140,6 +142,8 @@ class I18n implements WidgetsLocalizations {
   String get reservationStatusCancelled => "Cancelled";
   /// "complete"
   String get reservationStatusComplete => "complete";
+  /// "\$${price}/hour"
+  String boothCarouselCardPrice(String price) => "\$${price}/hour";
 }
 
 class _I18n_en_US extends I18n {

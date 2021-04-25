@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Friday, April 23rd, 2021
-/// Modified By: Dorian Holmes - dorian@longsoftware.io
+/// Last Modified: Saturday, April 24th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -18,6 +18,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:enum_to_string/enum_to_string.dart';
 import 'package:push_app/app/data/models/enums.dart';
+import 'package:push_app/app/data/models/shop.dart';
 import 'package:push_app/app/data/models/user_file.dart';
 import 'package:push_app/app/utils/is.dart';
 import 'app_content.dart';
@@ -35,6 +36,10 @@ class Booth extends AppContent {
     this.images,
     this.specialties,
     this.boothName,
+    this.feeType,
+    this.averageRating,
+    this.distance,
+    this.shop,
   }) : super(
           createdAt: createdAt,
           lastUpdatedAt: lastUpdatedAt,
@@ -48,22 +53,34 @@ class Booth extends AppContent {
   List<UserFile> images;
   String shopId;
   List<Specialties> specialties;
-  double ratings;
+  FeeType feeType;
+  double averageRating;
+  double distance;
+  Shop shop;
   String boothName;
 
-  Booth copyWith(
-          {int outletsAvailable,
-          bool hasHVAC,
-          String price,
-          List<UserFile> images,
-          String shopId,
-          List<Specialties> specialties}) =>
+  Booth copyWith({
+    int outletsAvailable,
+    bool hasHVAC,
+    String price,
+    List<UserFile> images,
+    String shopId,
+    List<Specialties> specialties,
+    FeeType feeType,
+    double averageRating,
+    double distance,
+    Shop shop,
+  }) =>
       Booth(
         outletsAvailable: outletsAvailable ?? this.outletsAvailable,
         hasHVAC: hasHVAC ?? this.hasHVAC,
         price: price ?? this.price,
         shopId: shopId ?? this.shopId,
         specialties: specialties ?? this.specialties,
+        feeType: feeType ?? this.feeType,
+        averageRating: averageRating ?? this.averageRating,
+        distance: distance ?? this.distance,
+        shop: shop ?? this.shop,
         createdAt: createdAt,
         lastUpdatedAt: lastUpdatedAt,
         id: id,
@@ -75,6 +92,8 @@ class Booth extends AppContent {
         hasHVAC = json['hasHVAC'] ?? false,
         price = json['price'] ?? 0,
         shopId = json['shopId'],
+        feeType = json['feeType'],
+        averageRating = json['averageRating'] ?? 0,
         specialties = Is.truthy(json['specialties'])
             ? json['specialties'].map(
                 (dynamic specialty) =>
@@ -97,6 +116,7 @@ class Booth extends AppContent {
         'hvac': hasHVAC,
         'price': price,
         'shopId': shopId,
+        'averageRating': averageRating,
         'specialties': specialties?.map(
           (Specialties specialty) => EnumToString.convertToString(specialty),
         ),

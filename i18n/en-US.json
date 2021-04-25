@@ -10,7 +10,8 @@
     "no": "No",
     "state": "State",
     "and": " and ",
-    "boothName": "Booth: ${name}"
+    "boothName": "Booth: ${name}",
+    "reserve": "Reserve"
   },
 
   "userTypeCard": {
@@ -94,5 +95,8 @@
     "confirmed": "Confirmed",
     "cancelled": "Cancelled",
     "complete": "complete"
+  },
+  "boothCarouselCard": {
+    "price": "\\$${price}/hour"
   }
 }

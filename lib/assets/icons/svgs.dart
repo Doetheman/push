@@ -8,7 +8,7 @@
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
 /// Last Modified: Saturday, April 24th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -53,3 +53,4 @@ const String COMPLETE_STATUS_ICON = SVG_PATH + 'complete_status.svg';
 const String CONFIRMED_STATUS_ICON = SVG_PATH + 'confirmed_status.svg';
 const String SHOP_MESSAGE_ICON = SVG_PATH + 'shop_message.svg';
 const String SHOP_LOCATION_ICON = SVG_PATH + 'shop_location.svg';
+const String STAR_ICON = SVG_PATH + 'star.svg';

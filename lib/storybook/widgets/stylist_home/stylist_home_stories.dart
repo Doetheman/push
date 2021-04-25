@@ -16,6 +16,7 @@
 /// -----------------------------------------------------------------
 import 'package:flutter/material.dart';
 import 'package:push_app/storybook/widgets/stylist_home/book_reservation_card_story.dart';
+import 'package:push_app/storybook/widgets/stylist_home/booth_carousel_card_story.dart';
 import 'package:push_app/storybook/widgets/stylist_home/explore_nearby_header_story.dart';
 import 'package:push_app/storybook/widgets/stylist_home/speciality_multi_select_story.dart';
 import 'package:push_app/storybook/widgets/stylist_home/reservation_card_story.dart';
@@ -27,4 +28,5 @@ List<Widget> buildStylistHomeStories() => <Widget>[
       SpecialityMultiSelectStory(),
       ExploreNearbyHeaderStory(),
       ReservationCardStory(),
+      BoothCarouselCardStory(),
     ];
