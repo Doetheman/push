@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, April 20th, 2021
-/// Modified By: Courtney Johnson - courtney@longsoftware.io
+/// Last Modified: Sunday, April 25th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -27,6 +27,8 @@ class StylistBasicInfoInputStory extends Story {
             section: 'Stylist Onboarding',
             builder: (BuildContext context, KnobsBuilder knobBuilder) {
               Get.put(StylistOnboardingController());
-              return StylistBasicInfoInput();
+              return SingleChildScrollView(
+                child: StylistBasicInfoInput(),
+              );
             });
 }

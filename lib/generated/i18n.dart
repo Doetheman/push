@@ -144,6 +144,14 @@ class I18n implements WidgetsLocalizations {
   String get reservationStatusComplete => "complete";
   /// "\$${price}/hour"
   String boothCarouselCardPrice(String price) => "\$${price}/hour";
+  /// "Continue"
+  String get signUpPageContine => "Continue";
+  /// "Select your specialities"
+  String get signUpPageSpecialities => "Select your specialities";
+  /// "Start Styling"
+  String get signUpPageStartStyling => "Start Styling";
+  /// "Sign Up"
+  String get signUpPageSignup => "Sign Up";
 }
 
 class _I18n_en_US extends I18n {

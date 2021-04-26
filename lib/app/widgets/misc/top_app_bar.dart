@@ -7,7 +7,7 @@
 ///
 /// Author: Dorian - dorian@longsoftware.io
 /// -----
-/// Last Modified: Friday, April 9th, 2021
+/// Last Modified: Sunday, April 25th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH
@@ -15,9 +15,10 @@
 /// -----------------------------------------------------------------
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:push_app/app/theme/app_theme.dart';
 import 'package:push_app/assets/icons/svgs.dart';
+import 'package:push_app/storybook/widgets/misc/svg_button.dart';
 
 class TopAppBar {
   static AppBar build({
@@ -37,10 +38,12 @@ class TopAppBar {
         elevation: 0,
         centerTitle: true,
         leading: showBackButton
-            ? IconButton(
-                icon: SvgPicture.asset(BACK_ARROW_ICON),
-                color: AppTheme.lightGrey,
-                onPressed: onClickBack,
+            ? Container(
+                child: SvgButton(
+                  svg: BACK_ARROW_ICON,
+                  color: AppTheme.darkGrey,
+                  onPressed: onClickBack,
+                ).paddingAll(20),
               )
             : null,
       );

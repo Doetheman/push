@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Thursday, April 15th, 2021
+/// Last Modified: Sunday, April 25th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -28,7 +28,8 @@ import 'package:push_app/generated/i18n.dart';
 
 class FeeTypes extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => ListView(
+  Widget build(BuildContext context) => Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
             I18n.of(context).feeTypesHeaderTitle,
@@ -87,5 +88,5 @@ class FeeTypes extends StatelessWidget {
               )
               .toList(),
         ],
-      ).paddingAll(20);
+      );
 }

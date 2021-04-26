@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
+/// Last Modified: Sunday, April 25th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -19,6 +19,7 @@ class Routes {
   // General
   static const String BASE = '/';
   static const String AUTH = BASE + 'auth/';
+  static const String SIGN_UP = BASE + 'sign_up/';
   static const String HOME = BASE + 'home/';
 
   // Stylist

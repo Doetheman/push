@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Thursday, April 22nd, 2021
-/// Modified By: Dorian Holmes - dorian@longsoftware.io
+/// Last Modified: Sunday, April 25th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -67,7 +67,7 @@ class _DropDownFieldState<T> extends State<DropDownField<T>> {
             setState(() {
               selectedOption = newValue;
             });
-            widget.onSelectOption;
+            widget.onSelectOption(newValue);
           },
           items: widget.options
               .map(

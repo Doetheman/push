@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, April 20th, 2021
+/// Last Modified: Sunday, April 25th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -34,7 +34,10 @@ class StylistBasicInfoInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Obx(
-        () => ListView(
+        () => Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             TextInputField(
               labelText: I18n.of(context).stylistBasicInfoInputFullName,
@@ -43,7 +46,7 @@ class StylistBasicInfoInput extends StatelessWidget {
             TextInputField(
               labelText: I18n.of(context).stylistBasicInfoInputPrimaryLocation,
               suffixIcon: SvgPicture.asset(LOCATION_ICON),
-              onChanged: controller.onChangeCurrentName,
+              onChanged: controller.onChangeCurrentLocation,
             ).paddingOnly(bottom: 20),
             Text(
               I18n.of(context).stylistBasicInfoInputAreYouLicensed,
@@ -93,6 +96,6 @@ class StylistBasicInfoInput extends StatelessWidget {
                     : controller.currentLicensedState,
               ).paddingOnly(bottom: 20),
           ],
-        ).paddingAll(20),
+        ),
       );
 }

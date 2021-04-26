@@ -98,5 +98,11 @@
   },
   "boothCarouselCard": {
     "price": "\\$${price}/hour"
+  },
+  "signUpPage": {
+    "contine": "Continue",
+    "specialities": "Select your specialities",
+    "startStyling": "Start Styling",
+    "signup": "Sign Up"
   }
 }

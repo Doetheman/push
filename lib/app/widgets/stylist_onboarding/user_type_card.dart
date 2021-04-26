@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Thursday, April 15th, 2021
+/// Last Modified: Sunday, April 25th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -18,6 +18,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:push_app/app/controllers/stylist_onboarding_controller.dart';
 import 'package:push_app/app/data/models/enums.dart';
 import 'package:push_app/app/theme/app_theme.dart';
 import 'package:push_app/app/widgets/misc/header_label.dart';
@@ -26,6 +27,7 @@ import 'package:push_app/assets/images/images.dart';
 import 'package:push_app/generated/i18n.dart';
 
 class UserTypeCard extends StatelessWidget {
+  final StylistOnboardingController stylistOnboardingController = Get.find();
   final UserType userType;
   bool get isStylist => userType == UserType.stylist;
 
@@ -62,7 +64,10 @@ class UserTypeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => GestureDetector(
-        onTap: () {},
+        onTap: () => <void>{
+          stylistOnboardingController.selectUserType(userType),
+          stylistOnboardingController.onPressContinue(),
+        },
         child: Container(
           width: Get.width,
           height: 327,
@@ -89,10 +94,11 @@ class UserTypeCard extends StatelessWidget {
                   width: 35,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(3.5),
-                    color: AppTheme.offBlack,
+                    color: AppTheme.offBlack.withOpacity(0.75),
                   ),
                   child: SvgPicture.asset(
                     RIGHT_ARROW,
+                    color: Colors.white,
                   ).paddingAll(9),
                 ),
               )

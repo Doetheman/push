@@ -7,8 +7,8 @@
 ///
 /// Author: Dorian Holmes - dorian@longsoftware.io
 /// -----
-/// Last Modified: Thursday, April 22nd, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Saturday, April 24th, 2021
+/// Modified By: Dorian Holmes - dorian@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -47,9 +47,9 @@ class SpecialityMultiSelect extends StatelessWidget {
               specialty: option,
               onToggleSelection: (bool value) {
                 if (value) {
-                  selectedOptions.add(option);
-                } else {
                   selectedOptions.remove(option);
+                } else {
+                  selectedOptions.add(option);
                 }
               },
             ),

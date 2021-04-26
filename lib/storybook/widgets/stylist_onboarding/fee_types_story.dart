@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Thursday, April 15th, 2021
+/// Last Modified: Sunday, April 25th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -24,6 +24,8 @@ class FeeTypesStory extends Story {
           name: 'Fee Types',
           section: 'Stylist Onboarding',
           builder: (BuildContext context, KnobsBuilder knobsBuilder) =>
-              FeeTypes(),
+              SingleChildScrollView(
+            child: FeeTypes(),
+          ),
         );
 }

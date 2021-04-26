@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, April 20th, 2021
+/// Last Modified: Sunday, April 25th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -15,15 +15,39 @@
 ///
 /// -----------------------------------------------------------------
 import 'package:get/get.dart';
+import 'package:push_app/app/data/models/enums.dart';
 
 class StylistOnboardingController extends GetxController {
   RxString currentName;
   RxString currentLocation;
   RxBool _isLicensed;
   RxString _currentLicensedState;
+  Rx<UserType> _selectedUserType;
+  Rx<OnboardingStep> _currentStep;
+  RxList<Specialties> selectedSpecialities;
 
   bool get isLicensed => _isLicensed.value;
   String get currentLicensedState => _currentLicensedState.value;
+  OnboardingStep get currentStep => _currentStep.value;
+  UserType get selectedUserType => _selectedUserType.value;
+
+  bool get canContinue {
+    switch (currentStep) {
+      case OnboardingStep.specialities:
+        return selectedSpecialities.isNotEmpty;
+      case OnboardingStep.basicInfo:
+        return currentLocation.isNotEmpty &&
+            currentName.isNotEmpty &&
+            (!isLicensed || (isLicensed && currentLicensedState.isNotEmpty));
+
+      default:
+        return true;
+    }
+  }
+
+  StylistOnboardingController({OnboardingStep step}) {
+    _currentStep = (step ?? OnboardingStep.userTypeSelecton).obs;
+  }
 
   @override
   void onInit() {
@@ -31,6 +55,8 @@ class StylistOnboardingController extends GetxController {
     currentLocation = ''.obs;
     _isLicensed = false.obs;
     _currentLicensedState = ''.obs;
+    selectedSpecialities = <Specialties>[].obs;
+
     super.onInit();
   }
 
@@ -43,14 +69,28 @@ class StylistOnboardingController extends GetxController {
   }
 
   void onChangeLicensed(bool licensed) {
-    if (licensed == true) {
-      _isLicensed.value = true;
-    } else {
-      _isLicensed.value = false;
-    }
+    _isLicensed.value = licensed;
   }
 
   void onChangeCurrentState(String state) {
     _currentLicensedState.value = state?.trim();
+  }
+
+  void onPressContinue() {
+    canContinue
+        ? _currentStep.value = OnboardingStep.values[currentStep.index + 1]
+        : false;
+  }
+
+  void updateStep(OnboardingStep step) {
+    _currentStep.value = step;
+  }
+
+  void selectUserType(UserType type) {
+    _selectedUserType = type.obs;
+  }
+
+  void onPressedBack() {
+    _currentStep.value = OnboardingStep.values[currentStep.index - 1];
   }
 }
