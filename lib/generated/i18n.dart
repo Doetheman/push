@@ -152,6 +152,12 @@ class I18n implements WidgetsLocalizations {
   String get signUpPageStartStyling => "Start Styling";
   /// "Sign Up"
   String get signUpPageSignup => "Sign Up";
+  /// "We connect top stylists and shops anywhere in the world"
+  String get emailInputInputHeader => "We connect top stylists and shops anywhere in the world";
+  /// "Enter your email to get started"
+  String get emailInputInputSubtitle => "Enter your email to get started";
+  /// "Email Address"
+  String get emailInputPlaceHolder => "Email Address";
 }
 
 class _I18n_en_US extends I18n {

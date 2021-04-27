@@ -104,5 +104,10 @@
     "specialities": "Select your specialities",
     "startStyling": "Start Styling",
     "signup": "Sign Up"
+  },
+  "emailInput": {
+    "inputHeader": "We connect top stylists and shops anywhere in the world",
+    "inputSubtitle": "Enter your email to get started",
+    "placeHolder": "Email Address"
   }
 }
