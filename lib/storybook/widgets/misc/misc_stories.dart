@@ -17,7 +17,6 @@
 import 'package:flutter/material.dart';
 import 'package:push_app/storybook/widgets/misc/action_button_story.dart';
 import 'package:push_app/storybook/widgets/misc/bottom_nav_bar_story.dart';
-import 'package:push_app/storybook/widgets/sign_up/email_input_story.dart';
 import 'package:push_app/storybook/widgets/misc/header_label_story.dart';
 import 'package:push_app/storybook/widgets/misc/top_app_bar_story.dart';
 
@@ -26,5 +25,4 @@ List<Widget> buildMiscStories() => <Widget>[
       TopAppBarStory(),
       BottomNavBarStory(),
       HeaderLabelStory(),
-      EmailInputStory(),
     ];

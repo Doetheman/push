@@ -56,6 +56,8 @@ class I18n implements WidgetsLocalizations {
   String commonBoothName(String name) => "Booth: ${name}";
   /// "Reserve"
   String get commonReserve => "Reserve";
+  /// "Password"
+  String get commonPassword => "Password";
   /// "Reserve a space to operate your business from any salon in the world."
   String get userTypeCardStylistBody => "Reserve a space to operate your business from any salon in the world.";
   /// "Manage each booth or space within your shop individually."
@@ -145,19 +147,23 @@ class I18n implements WidgetsLocalizations {
   /// "\$${price}/hour"
   String boothCarouselCardPrice(String price) => "\$${price}/hour";
   /// "Continue"
-  String get signUpPageContine => "Continue";
-  /// "Select your specialities"
-  String get signUpPageSpecialities => "Select your specialities";
+  String get signUpPageContinue => "Continue";
+  /// "Select your specialties"
+  String get signUpPageSpecialties => "Select your specialties";
   /// "Start Styling"
   String get signUpPageStartStyling => "Start Styling";
   /// "Sign Up"
-  String get signUpPageSignup => "Sign Up";
+  String get signUpPageSignUp => "Sign Up";
   /// "We connect top stylists and shops anywhere in the world"
   String get emailInputInputHeader => "We connect top stylists and shops anywhere in the world";
   /// "Enter your email to get started"
   String get emailInputInputSubtitle => "Enter your email to get started";
   /// "Email Address"
   String get emailInputPlaceHolder => "Email Address";
+  /// "Create a password"
+  String get emailInputNewPassword => "Create a password";
+  /// "Enter your password"
+  String get emailInputExistingPassword => "Enter your password";
 }
 
 class _I18n_en_US extends I18n {

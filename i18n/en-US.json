@@ -11,7 +11,8 @@
     "state": "State",
     "and": " and ",
     "boothName": "Booth: ${name}",
-    "reserve": "Reserve"
+    "reserve": "Reserve",
+    "password": "Password"
   },
 
   "userTypeCard": {
@@ -100,14 +101,16 @@
     "price": "\\$${price}/hour"
   },
   "signUpPage": {
-    "contine": "Continue",
-    "specialities": "Select your specialities",
+    "continue": "Continue",
+    "specialties": "Select your specialties",
     "startStyling": "Start Styling",
-    "signup": "Sign Up"
+    "signUp": "Sign Up"
   },
   "emailInput": {
     "inputHeader": "We connect top stylists and shops anywhere in the world",
     "inputSubtitle": "Enter your email to get started",
-    "placeHolder": "Email Address"
+    "placeHolder": "Email Address",
+    "newPassword": "Create a password",
+    "existingPassword": "Enter your password"
   }
 }

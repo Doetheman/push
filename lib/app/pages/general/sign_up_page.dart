@@ -7,7 +7,7 @@
 ///
 /// Author: Dorian Holmes - dorian@longsoftware.io
 /// -----
-/// Last Modified: Sunday, April 25th, 2021
+/// Last Modified: Monday, April 26th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -37,7 +37,7 @@ class SignUpPage extends StatelessWidget {
         () => Scaffold(
           resizeToAvoidBottomInset: false,
           appBar: TopAppBar.build(
-            title: Text(I18n.of(context).signUpPageSignup),
+            title: Text(I18n.of(context).signUpPageSignUp),
             showBackButton: stylistOnboardingController.currentStep !=
                 OnboardingStep.userTypeSelecton,
             onClickBack: () => stylistOnboardingController.onPressedBack(),
@@ -56,7 +56,7 @@ class SignUpPage extends StatelessWidget {
                   if (step == OnboardingStep.basicInfo) StylistBasicInfoInput(),
                   if (step == OnboardingStep.specialities)
                     SpecialityMultiSelect(
-                      label: I18n.of(context).signUpPageSpecialities,
+                      label: I18n.of(context).signUpPageSpecialties,
                       selectedOptions:
                           stylistOnboardingController.selectedSpecialities,
                     ).paddingOnly(bottom: 20),
@@ -64,7 +64,7 @@ class SignUpPage extends StatelessWidget {
                     ActionButton(
                       text: step == OnboardingStep.feeTypes
                           ? I18n.of(context).signUpPageStartStyling
-                          : I18n.of(context).signUpPageContine,
+                          : I18n.of(context).signUpPageContinue,
                       onPressed: stylistOnboardingController.onPressContinue,
                       isDisabled: !stylistOnboardingController.canContinue,
                     ),
