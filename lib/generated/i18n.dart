@@ -164,6 +164,14 @@ class I18n implements WidgetsLocalizations {
   String get emailInputNewPassword => "Create a password";
   /// "Enter your password"
   String get emailInputExistingPassword => "Enter your password";
+  /// "RECENT SEARCHES"
+  String get boothSearchInputRecentSearches => "RECENT SEARCHES";
+  /// "AREAS NEAR YOU"
+  String get boothSearchInputAreasNearYou => "AREAS NEAR YOU";
+  /// "LOCATIONS"
+  String get boothSearchInputLocations => "LOCATIONS";
+  /// "Current Location"
+  String get currentLocationCurrentLocation => "Current Location";
 }
 
 class _I18n_en_US extends I18n {

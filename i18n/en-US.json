@@ -112,5 +112,13 @@
     "placeHolder": "Email Address",
     "newPassword": "Create a password",
     "existingPassword": "Enter your password"
+  },
+  "boothSearchInput": {
+    "recentSearches": "RECENT SEARCHES",
+    "areasNearYou": "AREAS NEAR YOU",
+    "locations": "LOCATIONS"
+  },
+  "currentLocation": {
+    "currentLocation": "Current Location"
   }
 }
