@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Monday, April 26th, 2021
+/// Last Modified: Tuesday, April 27th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -15,7 +15,7 @@
 ///
 /// -----------------------------------------------------------------
 import 'package:flutter/material.dart';
-import 'package:push_app/app/widgets/sign_up/password.dart';
+import 'package:push_app/app/widgets/sign_up/password_input.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 
 class PasswordInputStory extends Story {

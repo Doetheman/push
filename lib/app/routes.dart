@@ -18,7 +18,7 @@
 class Routes {
   // General
   static const String BASE = '/';
-  static const String AUTH = BASE + 'auth/';
+  static const String SIGN_IN = BASE + 'sign_in/';
   static const String SIGN_UP = BASE + 'sign_up/';
   static const String HOME = BASE + 'home/';
 

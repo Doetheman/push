@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
+/// Last Modified: Tuesday, April 27th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -54,7 +54,7 @@ void main() async {
       },
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.AUTH,
+        initialRoute: Routes.SIGN_IN,
         theme: AppTheme().themeData,
         getPages: Pages.pages,
         title: 'PUSH',

@@ -14,6 +14,7 @@
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
 ///
 /// -----------------------------------------------------------------
+// ignore_for_file: always_specify_types
 
 import 'package:get/get.dart';
 import 'package:push_app/app/pages/stylist/stylist_home_page/booth_search_page.dart';
@@ -24,7 +25,7 @@ import 'package:push_app/app/routes.dart';
 abstract class Pages {
   static final List<GetPage> pages = <GetPage>[
     GetPage(
-      name: Routes.AUTH,
+      name: Routes.SIGN_IN,
       page: () => SignInPage(),
     ),
     GetPage(

@@ -16,6 +16,7 @@
 /// -----------------------------------------------------------------
 
 import 'package:get/get.dart';
+import 'package:push_app/app/routes.dart';
 
 class AuthController extends GetxController {
   //UserRepository userRepository = Get.find();
@@ -47,7 +48,11 @@ class AuthController extends GetxController {
   }
 
   void onPressContinue() {
-    _isEmail.toggle();
+    if (isEmail) {
+      _isEmail.toggle();
+    } else {
+      Get.offAndToNamed(Routes.STYLIST_HOME);
+    }
   }
 
   @override

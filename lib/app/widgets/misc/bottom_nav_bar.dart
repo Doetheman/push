@@ -7,16 +7,17 @@
 ///
 /// Author: Dorian - dorian@longsoftware.io
 /// -----
-/// Last Modified: Friday, April 9th, 2021
-/// Modified By: Dorian Holmes - dorian@longsoftware.io
-/// Last Modified: Friday, April 9th, 2021
-/// Modified By: Dorian Holmes - dorian@longsoftware.io
+/// Last Modified: Tuesday, April 27th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Tuesday, April 27th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH
 ///
 /// -----------------------------------------------------------------
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:push_app/app/routes.dart';
 import 'package:push_app/app/theme/app_theme.dart';
 import 'package:push_app/assets/icons/svgs.dart';
 
@@ -34,6 +35,18 @@ class AppNavController extends GetxController {
 
   void updateIndex(int index) {
     currentIndex.value = index;
+    switch (index) {
+      case 0:
+        {
+          Get.toNamed(Routes.STYLIST_HOME);
+        }
+        break;
+      case 1:
+        {
+          Get.toNamed(Routes.BOOTH_SEARCH);
+        }
+        break;
+    }
   }
 }
 
@@ -63,15 +76,16 @@ class NavBarItem extends StatelessWidget {
             child: Center(
               child: Obx(
                 () => IconButton(
-                  icon: SvgPicture.asset(svgPath,
-                    color: controller.currentIndex.value == index
-                      ? AppTheme.offBlack
-                      : AppTheme.mediumGrey,
+                    icon: SvgPicture.asset(
+                      svgPath,
+                      color: controller.currentIndex.value == index
+                          ? AppTheme.offBlack
+                          : AppTheme.mediumGrey,
                     ),
-                onPressed: () {
-                  controller.updateIndex(index);
-                }
-              ),),
+                    onPressed: () {
+                      controller.updateIndex(index);
+                    }),
+              ),
             ),
           ),
         ),
@@ -84,7 +98,7 @@ class BottomNavBar extends StatelessWidget {
   final List<String> tabSvgs = <String>[
     HOME_ICON,
     SEARCH_ICON,
-    ACCOUNT_ICON,
+    // ACCOUNT_ICON,
   ];
 
   @override

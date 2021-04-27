@@ -19,7 +19,7 @@ import 'package:get/get.dart';
 import 'package:push_app/app/controllers/auth_controller.dart';
 import 'package:push_app/app/widgets/misc/action_button.dart';
 import 'package:push_app/app/widgets/sign_up/email_input.dart';
-import 'package:push_app/app/widgets/sign_up/password.dart';
+import 'package:push_app/app/widgets/sign_up/password_input.dart';
 import 'package:push_app/app/widgets/sign_up/specialty_carousel.dart';
 import 'package:push_app/generated/i18n.dart';
 

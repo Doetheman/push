@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Monday, April 26th, 2021
-/// Modified By: Courtney Johnson - courtney@longsoftware.io
+/// Last Modified: Tuesday, April 27th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -33,7 +33,6 @@ class PasswordInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
         child: Column(
-          //mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(

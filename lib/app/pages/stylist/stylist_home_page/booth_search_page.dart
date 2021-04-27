@@ -30,13 +30,15 @@ class BoothSearchPage extends StatelessWidget {
         () => Scaffold(
           bottomNavigationBar:
               !controller.isEnteringSearchText ? BottomNavBar() : null,
-          body: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                if (controller.isEnteringSearchText)
-                  BoothSearchInput().paddingAll(20),
-                if (!controller.isEnteringSearchText) AvailableBoothList()
-              ],
+          body: SafeArea(
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  if (controller.isEnteringSearchText)
+                    BoothSearchInput().paddingAll(20),
+                  if (!controller.isEnteringSearchText) AvailableBoothList()
+                ],
+              ),
             ),
           ),
         ),
