@@ -1,18 +1,18 @@
 /// -----------------------------------------------------------------
-/// 
+///
 /// File: enums.dart
 /// Project: PUSH
 /// File Created: Saturday, March 20th, 2021
-/// Description: 
-/// 
+/// Description:
+///
 /// Author: Dorian Holmes - dorian@longsoftware.io
 /// -----
-/// Last Modified: Saturday, April 24th, 2021
-/// Modified By: Dorian Holmes - dorian@longsoftware.io
+/// Last Modified: Monday, April 26th, 2021
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// 
+///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
-/// 
+///
 /// -----------------------------------------------------------------
 
 /// -----------------------------------------------------------------

@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Thursday, April 15th, 2021
+/// Last Modified: Tuesday, April 27th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -18,6 +18,7 @@ import 'package:flutter/material.dart';
 import 'package:push_app/app/data/models/enums.dart';
 import 'package:push_app/app/theme/app_theme.dart';
 import 'package:get/get.dart';
+import 'package:push_app/app/utils/is.dart';
 import 'package:push_app/app/widgets/misc/header_label.dart';
 import 'package:push_app/assets/images/images.dart';
 import 'package:enum_to_string/enum_to_string.dart';
@@ -127,12 +128,12 @@ class StylistSpecialtyCard extends StatelessWidget {
             ],
             image: DecorationImage(
               fit: BoxFit.cover,
-              colorFilter: !isSelected
-                  ? null
-                  : ColorFilter.mode(
+              colorFilter: isSelected || Is.falsy(onToggleSelection)
+                  ? ColorFilter.mode(
                       Colors.black.withOpacity(0.5),
                       BlendMode.srcATop,
-                    ),
+                    )
+                  : null,
               image: AssetImage(backgroundImage),
             ),
           ),

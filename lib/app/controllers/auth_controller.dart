@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 7th, 2021
+/// Last Modified: Tuesday, April 27th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -16,17 +16,14 @@
 /// -----------------------------------------------------------------
 
 import 'package:get/get.dart';
-import 'package:push_app/app/controllers/user_controller.dart';
-import 'package:push_app/app/data/models/app_user.dart';
-import 'package:push_app/app/data/repositories/user_repository.dart';
-import 'package:push_app/app/utils/is.dart';
 
 class AuthController extends GetxController {
-  UserRepository userRepository = Get.find();
+  //UserRepository userRepository = Get.find();
 
   RxString email;
   RxString password;
   RxString confirmPassword;
+  RxBool _isEmail;
 
   RxBool _isSigningUp;
   bool get isSigningUp => _isSigningUp.value;
@@ -34,23 +31,38 @@ class AuthController extends GetxController {
   RxBool _isRequestInFlight;
   bool get isRequestInFlight => _isRequestInFlight.value;
 
+  bool get isEmail => _isEmail.value;
+
   bool get formIncomplete =>
       email.isBlank ||
       password.isBlank ||
       (isSigningUp && confirmPassword.isBlank);
+
+  bool get canContinue {
+    if (isEmail) {
+      return email.value.isNotEmpty;
+    } else {
+      return password.value.isNotEmpty;
+    }
+  }
+
+  void onPressContinue() {
+    _isEmail.toggle();
+  }
 
   @override
   void onInit() {
     email = ''.obs;
     password = ''.obs;
     confirmPassword = ''.obs;
+    _isEmail = true.obs;
 
-    checkForAuthenticatedUser();
+    //checkForAuthenticatedUser();
 
     super.onInit();
   }
 
-  void checkForAuthenticatedUser() async {
+  /*void checkForAuthenticatedUser() async {
     _isRequestInFlight = (userRepository.isLoggedIn).obs;
     if (_isRequestInFlight.value) {
       AppUser user = await userRepository.getCurrentUser();
@@ -60,7 +72,7 @@ class AuthController extends GetxController {
       authChangeControllerCleanup();
       _isRequestInFlight.value = false;
     }
-  }
+  }*/
 
   void onChangeEmail(String value) {
     email.value = value;
@@ -75,24 +87,24 @@ class AuthController extends GetxController {
   }
 
   // Clear out any user-specific controllers
-  void authChangeControllerCleanup() {
+  /*void authChangeControllerCleanup() {
     userRepository.onAuthStateChanged.listen((dynamic fbUser) {
       if (Is.falsy(fbUser)) {
         // TODO: Send user to auth page
         Get.delete<UserController>();
       }
     });
-  }
+  }*/
 
-  void onPressedForgotPassword() {
+  /*void onPressedForgotPassword() {
     if (GetUtils.isEmail(email.value)) {
       userRepository.sendPasswordResetEmail(email.value);
     }
 
     // TODO: Display dialog
-  }
+  }*/
 
-  void onPressedSignOut() async {
+  /*void onPressedSignOut() async {
     _isRequestInFlight.value = true;
     await userRepository.signOut();
     _isRequestInFlight.value = false;
@@ -102,7 +114,7 @@ class AuthController extends GetxController {
     _isRequestInFlight.value = true;
     await userRepository.deleteUser();
     _isRequestInFlight.value = false;
-  }
+  }*/
 
   void clearFields() {
     email.value = '';
@@ -110,7 +122,7 @@ class AuthController extends GetxController {
     confirmPassword.value = '';
   }
 
-  void onPressedSignUp() async {
+  /*void onPressedSignUp() async {
     _isRequestInFlight.value = true;
 
     // TODO: add logic to confirm that passwords match
@@ -128,9 +140,9 @@ class AuthController extends GetxController {
       _isRequestInFlight.value = false;
       // TODO: Show error dialog
     });
-  }
+  }*/
 
-  void onPressedSignIn() async {
+  /*void onPressedSignIn() async {
     _isRequestInFlight.value = true;
     await userRepository
         .signInWithEmailAndPassword(email.value, password.value)
@@ -145,5 +157,5 @@ class AuthController extends GetxController {
       _isRequestInFlight.value = false;
       // TODO: Show error dialog
     });
-  }
+  }*/
 }

@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Monday, April 26th, 2021
-/// Modified By: Courtney Johnson - courtney@longsoftware.io
+/// Last Modified: Tuesday, April 27th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -19,7 +19,6 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
 import 'package:push_app/app/data/models/enums.dart';
-import 'package:push_app/app/theme/app_theme.dart';
 import 'package:push_app/app/widgets/stylist_onboarding/stylist_specialty_card.dart';
 
 class SpecialtyCarousel extends StatelessWidget {
@@ -38,17 +37,9 @@ class SpecialtyCarousel extends StatelessWidget {
           ),
           items: Specialties.values
               .map(
-                (Specialties option) => Container(
-                  child: Theme(
-                    data: ThemeData(
-                      unselectedWidgetColor: AppTheme.darkGrey,
-                    ),
-                    child: StylistSpecialtyCard(
-                      isSelected: false,
-                      specialty: option,
-                      onToggleSelection: (_) {},
-                    ),
-                  ),
+                (Specialties option) => StylistSpecialtyCard(
+                  isSelected: false,
+                  specialty: option,
                 ).paddingOnly(right: 30),
               )
               .toList(),
