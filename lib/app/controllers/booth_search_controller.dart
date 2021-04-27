@@ -19,6 +19,10 @@ import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:push_app/app/data/models/booth_search.dart';
+import 'package:push_app/app/data/models/booth.dart';
+import 'package:push_app/app/data/models/enums.dart';
+import 'package:push_app/app/data/models/shop.dart';
+import 'package:push_app/app/data/models/user_file.dart';
 import 'package:push_app/app/utils/is.dart';
 
 class BoothSearchController extends GetxController {
@@ -27,6 +31,11 @@ class BoothSearchController extends GetxController {
 
   RxBool _isEnteringSearchText;
   bool get isEnteringSearchText => _isEnteringSearchText.value;
+  RxList<Booth> _booths;
+
+  List<Booth> get booths => (_booths);
+
+  int get countBooth => (_booths.length);
 
   TextEditingController searchBarTextController;
 
@@ -46,13 +55,53 @@ class BoothSearchController extends GetxController {
   void onInit() {
     searchText = ''.obs;
     _isEnteringSearchText = true.obs;
+    _booths = List<Booth>.generate(
+      10,
+      (_) => Booth(
+        distance: random.decimal(scale: 10).toDouble(),
+        shopId: Faker().guid.guid(),
+        images: List<UserFile>.generate(
+          4,
+          (_) => UserFile(
+            downloadUrl: Faker().image.image(
+              keywords: <String>['barbershop', 'salon', 'hair'],
+            ),
+          ),
+        ),
+        boothName: Faker().lorem.word(),
+        averageRating: random.decimal(scale: 5, min: 0),
+        price: random.integer(50),
+        feeType: random.element(FeeType.values),
+        specialties: List<Specialties>.generate(
+          3,
+          (_) => random.element(Specialties.values),
+        ),
+        shop: Shop(
+            name: Faker().company.name(),
+            images: List<UserFile>.generate(
+              4,
+              (_) => UserFile(
+                downloadUrl: Faker().image.image(
+                  keywords: <String>['barbershop', 'salon'],
+                ),
+              ),
+            ),
+            address: Faker().address.streetName()),
+      ),
+    ).obs;
 
     searchBarTextController = TextEditingController();
     super.onInit();
   }
 
-  void onChangeCurrentLocation(String name) {
+  void onChangeSearchText(String name) {
     searchText.value = name?.trim();
+  }
+
+  void onSelectLocation(String location) {
+    // TODO: switch to specialty selection
+
+    _isEnteringSearchText.value = false;
   }
 
   void clearText() {

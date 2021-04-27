@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Monday, April 26th, 2021
-/// Modified By: Dorian Holmes - dorian@longsoftware.io
+/// Last Modified: Tuesday, April 27th, 2021
+/// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -16,6 +16,7 @@
 /// -----------------------------------------------------------------
 
 import 'package:flutter/material.dart';
+import 'package:push_app/storybook/widgets/booth_search/available_booth_list_story.dart';
 import 'package:push_app/storybook/widgets/booth_search/booth_search_input_story.dart';
 import 'package:push_app/storybook/widgets/booth_search/location_list_item_story.dart';
 import 'package:push_app/storybook/widgets/booth_search/recent_search_list_item_story.dart';
@@ -26,4 +27,5 @@ List<Widget> buildBoothSearchStories() => <Widget>[
       LocationListItemStory(),
       SearchBarStory(),
       BoothSearchInputStory(),
+      AvailableBoothListStory(),
     ];

@@ -7,7 +7,7 @@
 ///
 /// Author: Dorian Holmes - dorian@longsoftware.io
 /// -----
-/// Last Modified: Monday, April 26th, 2021
+/// Last Modified: Tuesday, April 27th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -57,13 +57,19 @@ class BoothSearchInput extends StatelessWidget {
           CurrentLocation().paddingOnly(bottom: 15),
           if (controller.searchText.isEmpty)
             ...controller.areasNear.map(
-              (String city) =>
-                  LocationListItem(cityAndState: city).paddingOnly(bottom: 15),
+              (String city) => GestureDetector(
+                onTap: () => controller.onSelectLocation(city),
+                child: LocationListItem(cityAndState: city)
+                    .paddingOnly(bottom: 15),
+              ),
             ),
           if (controller.searchText.isNotEmpty)
             ...controller.areasNear.map(
-              (String city) =>
-                  LocationListItem(cityAndState: city).paddingOnly(bottom: 15),
+              (String city) => GestureDetector(
+                onTap: () => controller.onSelectLocation(city),
+                child: LocationListItem(cityAndState: city)
+                    .paddingOnly(bottom: 15),
+              ),
             ),
         ],
       ),

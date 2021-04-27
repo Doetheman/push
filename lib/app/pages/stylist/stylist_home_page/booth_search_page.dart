@@ -18,19 +18,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:push_app/app/controllers/booth_search_controller.dart';
+import 'package:push_app/app/widgets/booth_search/available_booths_list.dart';
 import 'package:push_app/app/widgets/booth_search/booth_search_input.dart';
+import 'package:push_app/app/widgets/misc/bottom_nav_bar.dart';
 
 class BoothSearchPage extends StatelessWidget {
   final BoothSearchController controller = Get.find();
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              if (controller.isEnteringSearchText)
-                BoothSearchInput().paddingAll(20),
-            ],
+  Widget build(BuildContext context) => Obx(
+        () => Scaffold(
+          bottomNavigationBar:
+              !controller.isEnteringSearchText ? BottomNavBar() : null,
+          body: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                if (controller.isEnteringSearchText)
+                  BoothSearchInput().paddingAll(20),
+                if (!controller.isEnteringSearchText) AvailableBoothList()
+              ],
+            ),
           ),
         ),
       );

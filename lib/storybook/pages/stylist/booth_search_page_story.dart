@@ -17,8 +17,10 @@
 
 import 'package:get/get.dart';
 import 'package:push_app/app/controllers/booth_search_controller.dart';
+import 'package:push_app/app/data/providers/auth_provider.dart';
 import 'package:push_app/app/pages/stylist/stylist_home_page/booth_search_page.dart';
 import 'package:push_app/storybook/helper.dart/story_wrapper.dart';
+import 'package:push_app/storybook/mocks/providers/mock_auth_provider.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 
 class BoothSearchPageStory extends Story {
@@ -27,6 +29,7 @@ class BoothSearchPageStory extends Story {
             name: 'Booth Search',
             section: 'Pages',
             builder: (_, KnobsBuilder kB) {
+              Get.put<BaseAuthProvider>(MockAuthProvider());
               Get.put(BoothSearchController());
 
               return StoryWrapper.phoneContainer(

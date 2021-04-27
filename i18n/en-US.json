@@ -120,5 +120,8 @@
   },
   "currentLocation": {
     "currentLocation": "Current Location"
+  },
+  "boothsAvailable": {
+    "boothsAvailable": "${booths} booths available"
   }
 }

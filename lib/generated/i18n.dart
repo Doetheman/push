@@ -172,6 +172,8 @@ class I18n implements WidgetsLocalizations {
   String get boothSearchInputLocations => "LOCATIONS";
   /// "Current Location"
   String get currentLocationCurrentLocation => "Current Location";
+  /// "${booths} booths available"
+  String boothsAvailableBoothsAvailable(String booths) => "${booths} booths available";
 }
 
 class _I18n_en_US extends I18n {
