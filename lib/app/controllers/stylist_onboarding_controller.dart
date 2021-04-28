@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Sunday, April 25th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Tuesday, April 27th, 2021
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -16,6 +16,7 @@
 /// -----------------------------------------------------------------
 import 'package:get/get.dart';
 import 'package:push_app/app/data/models/enums.dart';
+import 'package:push_app/app/routes.dart';
 
 class StylistOnboardingController extends GetxController {
   RxString currentName;
@@ -77,9 +78,13 @@ class StylistOnboardingController extends GetxController {
   }
 
   void onPressContinue() {
-    canContinue
-        ? _currentStep.value = OnboardingStep.values[currentStep.index + 1]
-        : false;
+    if (_currentStep.value == OnboardingStep.feeTypes) {
+      Get.offAndToNamed(Routes.STYLIST_HOME);
+    } else {
+      canContinue
+          ? _currentStep.value = OnboardingStep.values[currentStep.index + 1]
+          : false;
+    }
   }
 
   void updateStep(OnboardingStep step) {

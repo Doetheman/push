@@ -8,7 +8,7 @@
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
 /// Last Modified: Tuesday, April 27th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -51,7 +51,7 @@ class AuthController extends GetxController {
     if (isEmail) {
       _isEmail.toggle();
     } else {
-      Get.offAndToNamed(Routes.STYLIST_HOME);
+      Get.offAndToNamed(Routes.SIGN_UP);
     }
   }
 
