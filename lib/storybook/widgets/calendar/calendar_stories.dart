@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, April 27th, 2021
+/// Last Modified: Wednesday, April 28th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -15,8 +15,10 @@
 ///
 /// -----------------------------------------------------------------
 import 'package:flutter/material.dart';
+import 'package:push_app/storybook/widgets/calendar/calendar_day_story.dart';
 import 'package:push_app/storybook/widgets/calendar/calendar_week_day_labels_story.dart';
 
 List<Widget> buildCalendarStories() => <Widget>[
       CalendarWeekDayLabelsStory(),
+      CalendarDayStory(),
     ];
