@@ -7,7 +7,7 @@
 ///
 /// Author: Dorian Holmes - dorian@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, April 27th, 2021
+/// Last Modified: Thursday, April 29th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -36,7 +36,7 @@ class BoothSearchInput extends StatelessWidget {
         children: <Widget>[
           SearchBar(),
           if (controller.searchText.isEmpty)
-            Text(I18n.of(context).boothSearchInputRecentSearches,
+            Text(I18n.of(context).boothSearchRecentSearches,
                     style: AppTheme.subtitleTwo)
                 .paddingSymmetric(vertical: 15),
           if (controller.searchText.isEmpty)
@@ -46,14 +46,15 @@ class BoothSearchInput extends StatelessWidget {
             ),
           if (controller.searchText.isEmpty)
             Text(
-              I18n.of(context).boothSearchInputAreasNearYou,
+              I18n.of(context).boothSearchAreasNearYou,
               style: AppTheme.subtitleTwo,
               textAlign: TextAlign.left,
             ).paddingOnly(bottom: 15),
           if (controller.searchText.isNotEmpty)
-            Text(I18n.of(context).boothSearchInputLocations,
-                    style: AppTheme.subtitleTwo)
-                .paddingSymmetric(vertical: 15),
+            Text(
+              I18n.of(context).boothSearchLocations,
+              style: AppTheme.subtitleTwo,
+            ).paddingSymmetric(vertical: 15),
           CurrentLocation().paddingOnly(bottom: 15),
           if (controller.searchText.isEmpty)
             ...controller.areasNear.map(

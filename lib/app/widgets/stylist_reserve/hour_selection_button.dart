@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 28th, 2021
+/// Last Modified: Thursday, April 29th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -19,7 +19,6 @@ import 'package:flutter/material.dart';
 import 'package:push_app/app/data/models/enums.dart';
 import 'package:push_app/app/theme/app_theme.dart';
 import 'package:push_app/app/utils/date_time_utils.dart';
-import 'package:push_app/generated/i18n.dart';
 
 class HourSelectionButton extends StatelessWidget {
   final HourSelectionState state;
@@ -81,10 +80,7 @@ class HourSelectionButton extends StatelessWidget {
                   : null,
             ),
             child: Text(
-              I18n.of(context).hourSelectionButtonSelectionTime(
-                DateTimeUtils.getHour(startTime),
-                DateTimeUtils.getHour(endTime),
-              ),
+              '${DateTimeUtils.getHour(startTime)}-${DateTimeUtils.getHour(endTime)}',
               style: AppTheme.bodyOne.copyWith(
                 color: foregroundColor,
               ),

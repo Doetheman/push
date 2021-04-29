@@ -7,7 +7,7 @@
 ///
 /// Author: Dorian Holmes - dorian@longsoftware.io
 /// -----
-/// Last Modified: Tuesday, April 27th, 2021
+/// Last Modified: Thursday, April 29th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -35,8 +35,8 @@ class AvailableBoothList extends StatelessWidget {
         Row(
           children: <Widget>[
             Text(
-              I18n.of(context).boothsAvailableBoothsAvailable(
-                  controller.countBooth.toString()),
+              I18n.of(context)
+                  .boothSearchBoothsAvailable(controller.countBooth.toString()),
               style: AppTheme.headlineOne,
             ),
             Spacer(),

@@ -113,18 +113,15 @@
     "newPassword": "Create a password",
     "existingPassword": "Enter your password"
   },
-  "boothSearchInput": {
+  "boothSearch": {
     "recentSearches": "RECENT SEARCHES",
     "areasNearYou": "AREAS NEAR YOU",
-    "locations": "LOCATIONS"
-  },
-  "currentLocation": {
-    "currentLocation": "Current Location"
-  },
-  "boothsAvailable": {
+    "locations": "LOCATIONS",
+    "currentLocation": "Current Location",
     "boothsAvailable": "${booths} booths available"
   },
-  "hourSelectionButton": {
-    "selectionTime": "${startHour} - ${endHour}"
+  "sortFilter": {
+    "hoursAvailable": "Hours Available",
+    "hoursAvailableToReserve": "hours available to reserve"
   }
 }

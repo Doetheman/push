@@ -165,17 +165,19 @@ class I18n implements WidgetsLocalizations {
   /// "Enter your password"
   String get emailInputExistingPassword => "Enter your password";
   /// "RECENT SEARCHES"
-  String get boothSearchInputRecentSearches => "RECENT SEARCHES";
+  String get boothSearchRecentSearches => "RECENT SEARCHES";
   /// "AREAS NEAR YOU"
-  String get boothSearchInputAreasNearYou => "AREAS NEAR YOU";
+  String get boothSearchAreasNearYou => "AREAS NEAR YOU";
   /// "LOCATIONS"
-  String get boothSearchInputLocations => "LOCATIONS";
+  String get boothSearchLocations => "LOCATIONS";
   /// "Current Location"
-  String get currentLocationCurrentLocation => "Current Location";
+  String get boothSearchCurrentLocation => "Current Location";
   /// "${booths} booths available"
-  String boothsAvailableBoothsAvailable(String booths) => "${booths} booths available";
-  /// "${startHour} - ${endHour}"
-  String hourSelectionButtonSelectionTime(String startHour, String endHour) => "${startHour} - ${endHour}";
+  String boothSearchBoothsAvailable(String booths) => "${booths} booths available";
+  /// "Hours Available"
+  String get sortFilterHoursAvailable => "Hours Available";
+  /// "hours available to reserve"
+  String get sortFilterHoursAvailableToReserve => "hours available to reserve";
 }
 
 class _I18n_en_US extends I18n {
