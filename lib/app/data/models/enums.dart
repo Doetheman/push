@@ -8,7 +8,7 @@
 /// Author: Dorian Holmes - dorian@longsoftware.io
 /// -----
 /// Last Modified: Wednesday, April 28th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -145,4 +145,10 @@ enum CalendarDayView {
   today,
   highlighted,
   unselected,
+}
+
+enum HourSelectionState {
+  unselected,
+  selected,
+  unavailable,
 }

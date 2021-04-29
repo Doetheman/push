@@ -174,6 +174,8 @@ class I18n implements WidgetsLocalizations {
   String get currentLocationCurrentLocation => "Current Location";
   /// "${booths} booths available"
   String boothsAvailableBoothsAvailable(String booths) => "${booths} booths available";
+  /// "${startHour} - ${endHour}"
+  String hourSelectionButtonSelectionTime(String startHour, String endHour) => "${startHour} - ${endHour}";
 }
 
 class _I18n_en_US extends I18n {

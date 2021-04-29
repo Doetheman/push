@@ -123,5 +123,8 @@
   },
   "boothsAvailable": {
     "boothsAvailable": "${booths} booths available"
+  },
+  "hourSelectionButton": {
+    "selectionTime": "${startHour} - ${endHour}"
   }
 }
