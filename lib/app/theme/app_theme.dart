@@ -7,7 +7,7 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Sunday, April 18th, 2021
+/// Last Modified: Thursday, April 29th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -101,6 +101,12 @@ class AppTheme {
         primaryColor: offBlack,
         backgroundColor: offWhite,
         scaffoldBackgroundColor: offWhite,
+        sliderTheme: SliderThemeData(
+          inactiveTrackColor: lightGrey,
+          thumbColor: primaryBlue,
+          activeTrackColor: primaryBlue,
+          trackHeight: 2,
+        ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             primary: offBlack,

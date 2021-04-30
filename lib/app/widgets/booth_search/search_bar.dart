@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Wednesday, April 21st, 2021
+/// Last Modified: Tuesday, April 27th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -66,7 +66,7 @@ class SearchBar extends StatelessWidget {
             style: AppTheme.bodyTwo.copyWith(color: AppTheme.darkGrey),
             cursorHeight: 15,
             textAlign: TextAlign.start,
-            onChanged: controller.onChangeCurrentLocation,
+            onChanged: controller.onChangeSearchText,
             controller: controller.searchBarTextController,
           ),
         ),

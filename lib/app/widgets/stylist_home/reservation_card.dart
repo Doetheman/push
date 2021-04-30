@@ -7,7 +7,7 @@
 ///
 /// Author: Dorian Holmes - dorian@longsoftware.io
 /// -----
-/// Last Modified: Saturday, April 24th, 2021
+/// Last Modified: Monday, April 26th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -66,6 +66,8 @@ class ReservationCard extends StatelessWidget {
   Text buildShopName() => Text(
         reservation.shop.name,
         style: AppTheme.bodyOne.copyWith(color: AppTheme.darkGrey),
+        overflow: TextOverflow.fade,
+        maxLines: 1,
       );
 
   Text buildShopAddress() => Text(
@@ -126,27 +128,29 @@ class ReservationCard extends StatelessWidget {
                 file: Indexer.getListIndex(reservation.shop.images, 0),
               ).paddingOnly(right: 15),
             if (isCarouselView)
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  buildStatus(context),
-                  buildStartAndEndTime().paddingOnly(top: 8),
-                  buildShopName(),
-                  buildBoothName(context),
-                  Row(
-                    children: <Widget>[
-                      SvgPicture.asset(SHOP_LOCATION_ICON)
-                          .paddingOnly(right: 10),
-                      Container(
-                        width: 115,
-                        child: buildShopAddress(),
-                      ),
-                    ],
-                  ).paddingOnly(top: 14),
-                ],
-              ).paddingOnly(top: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    buildStatus(context),
+                    buildStartAndEndTime().paddingOnly(top: 8),
+                    Flexible(child: buildShopName()),
+                    buildBoothName(context),
+                    Row(
+                      children: <Widget>[
+                        SvgPicture.asset(SHOP_LOCATION_ICON)
+                            .paddingOnly(right: 10),
+                        Container(
+                          width: 115,
+                          child: buildShopAddress(),
+                        ),
+                      ],
+                    ).paddingOnly(top: 14),
+                  ],
+                ).paddingOnly(top: 10),
+              ),
             if (isFullWidthView)
               ImageWrapper(
                 width: 90,

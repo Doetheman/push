@@ -7,8 +7,8 @@
 ///
 /// Author: Brandon Long - brandon@longsoftware.io
 /// -----
-/// Last Modified: Sunday, April 25th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Wednesday, April 28th, 2021
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -25,8 +25,10 @@ import 'package:push_app/storybook/widgets/booth_search/booth_search_stories.dar
 import 'package:push_app/storybook/widgets/calendar/calendar_stories.dart';
 import 'package:push_app/storybook/widgets/fields/field_stories.dart';
 import 'package:push_app/storybook/widgets/misc/misc_stories.dart';
+import 'package:push_app/storybook/widgets/sign_up/sign_up_stories.dart';
 import 'package:push_app/storybook/widgets/stylist_onboarding/stylist_onboarding_stories.dart';
 import 'package:push_app/storybook/widgets/stylist_home/stylist_home_stories.dart';
+import 'package:push_app/storybook/widgets/stylist_reserve/stylist_reserve_stories.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 
 void main() {
@@ -51,6 +53,8 @@ class StorybookApp extends StatelessWidget {
           ...buildStylistHomeStories(),
           ...buildBoothSearchStories(),
           ...buildCalendarStories(),
+          ...buildSignUpStories(),
+          ...buildStylistReserveStories(),
         ],
       );
 }

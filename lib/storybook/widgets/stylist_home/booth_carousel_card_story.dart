@@ -7,8 +7,8 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Saturday, April 24th, 2021
-/// Modified By: Brandon Long - brandon@longsoftware.io
+/// Last Modified: Thursday, April 29th, 2021
+/// Modified By: Courtney Johnson - courtney@longsoftware.io
 /// -----
 ///
 /// Copyright (C) 2021 - 2021 Long Software LLC & PUSH LLC
@@ -17,6 +17,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:push_app/app/data/models/booth.dart';
+import 'package:push_app/app/data/models/shop.dart';
 import 'package:push_app/app/data/models/user_file.dart';
 import 'package:push_app/app/data/providers/auth_provider.dart';
 import 'package:push_app/app/widgets/stylist_home/booth_carousel_card.dart';
@@ -37,7 +38,9 @@ class BoothCarouselCardStory extends Story {
                 boothName: 'Booth #12',
                 price: 300,
                 averageRating: 4,
-                shopId: 'Cut\'s N Styles',
+                shop: Shop(
+                  name: 'Cuts n\' Styles',
+                ),
                 distance: 4.7,
                 images: List<UserFile>.generate(
                   6,

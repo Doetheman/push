@@ -7,7 +7,7 @@
 ///
 /// Author: Courtney Johnson - courtney@longsoftware.io
 /// -----
-/// Last Modified: Saturday, April 24th, 2021
+/// Last Modified: Monday, April 26th, 2021
 /// Modified By: Brandon Long - brandon@longsoftware.io
 /// -----
 ///
@@ -16,11 +16,9 @@
 /// -----------------------------------------------------------------
 
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:push_app/app/data/models/booth.dart';
-import 'package:push_app/app/data/models/user_file.dart';
 import 'package:push_app/app/theme/app_theme.dart';
 import 'package:push_app/app/widgets/misc/header_label.dart';
 import 'package:push_app/app/widgets/misc/image_wrapper.dart';
@@ -37,22 +35,22 @@ class BoothCarouselCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Column(
         children: <Widget>[
-          CarouselSlider(
-            options: CarouselOptions(
-              aspectRatio: 345 / 156,
-              viewportFraction: 345 / Get.width,
-              enableInfiniteScroll: false,
+          Container(
+            height: 156,
+            child: ListView.separated(
+              separatorBuilder: (_, __) => SizedBox(
+                width: 10,
+              ),
+              itemCount: booth.images.length,
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              itemBuilder: (BuildContext context, int index) => ImageWrapper(
+                borderRadius: 5,
+                height: 156,
+                width: 335,
+                file: booth.images[index],
+              ),
             ),
-            items: booth.images
-                .map<Widget>(
-                  (UserFile file) => ImageWrapper(
-                    borderRadius: 5,
-                    height: 156,
-                    width: 335,
-                    file: file,
-                  ).paddingOnly(right: 10),
-                )
-                .toList(),
           ).paddingOnly(bottom: 10),
           Row(
             children: <Widget>[
@@ -61,11 +59,11 @@ class BoothCarouselCard extends StatelessWidget {
                   TextSpan(
                     children: <InlineSpan>[
                       TextSpan(
-                        text: booth.shopId + ' ',
+                        text: booth.shop.name + ' ',
                         style: AppTheme.subtitleOne,
                       ),
                       TextSpan(
-                        text: booth.distance.toString() + ' mi',
+                        text: booth.distance.toPrecision(2).toString() + ' mi',
                         style: AppTheme.bodyTwo.copyWith(
                             color: AppTheme.darkGrey,
                             fontWeight: FontWeight.w400),
@@ -78,8 +76,8 @@ class BoothCarouselCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
                   Text(
-                    I18n.of(context)
-                        .boothCarouselCardPrice((booth.price * .01).toString()),
+                    I18n.of(context).boothCarouselCardPrice(
+                        ((booth.price * .01).toPrecision(2)).toString()),
                     style: AppTheme.bodyOne.copyWith(color: AppTheme.darkGrey),
                   ),
                 ],
